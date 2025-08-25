@@ -264,32 +264,43 @@
 
   // Phone formatting function
   function formatPhoneNumber(value) {
-    // Always ensure it starts with +55
-    if (!value.startsWith('+55')) {
-      value = '+55 ';
+    // Remove all non-numeric characters first
+    const cleanValue = value.replace(/\D/g, '');
+    
+    // If it doesn't start with 55, add it
+    let numbers = cleanValue;
+    if (!cleanValue.startsWith('55')) {
+      numbers = '55' + cleanValue;
     }
-
-    // Extract only the numbers after +55
-    const afterPrefix = value.substring(4);
-    const numbers = afterPrefix.replace(/\D/g, '');
+    
+    // Remove the country code (55) to get only DDD + phone number
+    const localNumbers = numbers.substring(2);
 
     // Format based on the number of digits
     let formatted = '+55 ';
 
-    if (numbers.length === 0) {
+    if (localNumbers.length === 0) {
       return formatted;
-    } else if (numbers.length <= 2) {
+    } else if (localNumbers.length <= 2) {
       // DDD only
-      formatted += `(${numbers}`;
-    } else if (numbers.length <= 6) {
+      formatted += `(${localNumbers}`;
+    } else if (localNumbers.length <= 6) {
       // DDD + partial number
-      formatted += `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
-    } else if (numbers.length <= 10) {
+      const ddd = localNumbers.slice(0, 2);
+      const phoneStart = localNumbers.slice(2);
+      formatted += `(${ddd}) ${phoneStart}`;
+    } else if (localNumbers.length <= 10) {
       // DDD + 8 digits (landline)
-      formatted += `(${numbers.slice(0, 2)}) ${numbers.slice(2, 6)}-${numbers.slice(6)}`;
+      const ddd = localNumbers.slice(0, 2);
+      const phoneFirst = localNumbers.slice(2, 6);
+      const phoneLast = localNumbers.slice(6, 10);
+      formatted += `(${ddd}) ${phoneFirst}-${phoneLast}`;
     } else {
       // DDD + 9 digits (mobile)
-      formatted += `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+      const ddd = localNumbers.slice(0, 2);
+      const phoneFirst = localNumbers.slice(2, 7);
+      const phoneLast = localNumbers.slice(7, 11);
+      formatted += `(${ddd}) ${phoneFirst}-${phoneLast}`;
     }
 
     return formatted;
