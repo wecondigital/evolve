@@ -262,55 +262,58 @@
     return data;
   }
 
+  // Get Facebook parameters from cookies
+  function getFacebookParams() {
+    const cookies = document.cookie.split(';');
+    let fbc = '';
+    let fbp = '';
+    
+    cookies.forEach(cookie => {
+      const [name, value] = cookie.trim().split('=');
+      if (name === '_fbc') fbc = value;
+      if (name === '_fbp') fbp = value;
+    });
+    
+    return { fbc, fbp };
+  }
+
+  // Phone number state management
+  let currentCleanPhoneNumber = '';
+
   // Phone formatting function
-  function formatPhoneNumber(value) {
+  function formatPhoneNumber(cleanDigits) {
     console.log('=== INÍCIO formatPhoneNumber ===');
-    console.log('Valor recebido:', value);
-    
-    // Remove all non-numeric characters first
-    const cleanValue = value.replace(/\D/g, '');
-    console.log('Valor limpo (só números):', cleanValue);
-    
-    // If it doesn't start with 55, add it
-    let numbers = cleanValue;
-    if (!cleanValue.startsWith('55')) {
-      numbers = '55' + cleanValue;
-    }
-    console.log('Números com código do país:', numbers);
-    
-    // Remove the country code (55) to get only DDD + phone number
-    const localNumbers = numbers.substring(2);
-    console.log('Números locais (DDD + telefone):', localNumbers);
+    console.log('Dígitos limpos recebidos:', cleanDigits);
 
     // Format based on the number of digits
     let formatted = '+55 ';
 
-    if (localNumbers.length === 0) {
+    if (cleanDigits.length === 0) {
       return formatted;
-    } else if (localNumbers.length <= 2) {
+    } else if (cleanDigits.length <= 2) {
       // DDD only
       console.log('Formatando: DDD apenas');
-      formatted += `(${localNumbers}`;
-    } else if (localNumbers.length <= 6) {
+      formatted += `(${cleanDigits}`;
+    } else if (cleanDigits.length <= 6) {
       // DDD + partial number
-      const ddd = localNumbers.slice(0, 2);
-      const phoneStart = localNumbers.slice(2);
+      const ddd = cleanDigits.slice(0, 2);
+      const phoneStart = cleanDigits.slice(2);
       console.log('Formatando: DDD + início do telefone');
       console.log('DDD:', ddd, 'Início do telefone:', phoneStart);
       formatted += `(${ddd}) ${phoneStart}`;
-    } else if (localNumbers.length <= 10) {
+    } else if (cleanDigits.length <= 10) {
       // DDD + 8 digits (landline)
-      const ddd = localNumbers.slice(0, 2);
-      const phoneFirst = localNumbers.slice(2, 6);
-      const phoneLast = localNumbers.slice(6, 10);
+      const ddd = cleanDigits.slice(0, 2);
+      const phoneFirst = cleanDigits.slice(2, 6);
+      const phoneLast = cleanDigits.slice(6, 10);
       console.log('Formatando: Telefone fixo (8 dígitos)');
       console.log('DDD:', ddd, 'Primeira parte:', phoneFirst, 'Segunda parte:', phoneLast);
       formatted += `(${ddd}) ${phoneFirst}-${phoneLast}`;
     } else {
       // DDD + 9 digits (mobile)
-      const ddd = localNumbers.slice(0, 2);
-      const phoneFirst = localNumbers.slice(2, 7);
-      const phoneLast = localNumbers.slice(7, 11);
+      const ddd = cleanDigits.slice(0, 2);
+      const phoneFirst = cleanDigits.slice(2, 7);
+      const phoneLast = cleanDigits.slice(7, 11);
       console.log('Formatando: Celular (9 dígitos)');
       console.log('DDD:', ddd, 'Primeira parte:', phoneFirst, 'Segunda parte:', phoneLast);
       formatted += `(${ddd}) ${phoneFirst}-${phoneLast}`;
@@ -319,6 +322,35 @@
     console.log('Resultado formatado:', formatted);
     console.log('=== FIM formatPhoneNumber ===');
     return formatted;
+  }
+
+  // Calculate cursor position after formatting
+  function calculateCursorPosition(cleanDigits, cursorInClean) {
+    console.log('Calculando posição do cursor para:', cleanDigits, 'cursor em:', cursorInClean);
+    
+    // Base position starts after "+55 "
+    let position = 4;
+    
+    if (cursorInClean <= 0) {
+      return position;
+    }
+    
+    if (cursorInClean <= 2) {
+      // Within DDD, add opening parenthesis
+      position += 1 + cursorInClean; // "(" + digits
+    } else if (cursorInClean <= 6) {
+      // Within first part of phone number
+      position += 4 + (cursorInClean - 2); // "(XX) " + digits
+    } else if (cursorInClean <= 10) {
+      // Within second part of phone number (after dash)
+      position += 9 + (cursorInClean - 6); // "(XX) XXXX-" + digits
+    } else {
+      // Beyond 10 digits (mobile)
+      position += 10 + (cursorInClean - 7); // "(XX) XXXXX-" + digits
+    }
+    
+    console.log('Posição calculada do cursor:', position);
+    return position;
   }
 
   // Get URL parameters
@@ -334,21 +366,6 @@
       utm_content: params.get('utm_content') || '',
       utm_term: params.get('utm_term') || '',
     };
-  }
-
-  // Get Facebook parameters from cookies
-  function getFacebookParams() {
-    const cookies = document.cookie.split(';');
-    let fbc = '';
-    let fbp = '';
-    
-    cookies.forEach(cookie => {
-      const [name, value] = cookie.trim().split('=');
-      if (name === '_fbc') fbc = value;
-      if (name === '_fbp') fbp = value;
-    });
-    
-    return { fbc, fbp };
   }
 
   // Initialize hidden fields
@@ -420,23 +437,40 @@
       const target = e.target;
       console.log('>>> EVENTO INPUT DISPARADO <<<');
       console.log('Valor atual do campo:', target.value);
-      console.log('Posição do cursor:', target.selectionStart);
       
-      let cursorPosition = target.selectionStart;
-      const newValue = formatPhoneNumber(target.value);
+      // Get only the digits from the current value
+      const allDigits = target.value.replace(/\D/g, '');
+      console.log('Todos os dígitos extraídos:', allDigits);
       
-      console.log('Novo valor após formatação:', newValue);
+      // Remove the country code (55) if present to get local digits
+      let localDigits = allDigits;
+      if (allDigits.startsWith('55') && allDigits.length > 2) {
+        localDigits = allDigits.substring(2);
+      }
+      console.log('Dígitos locais extraídos:', localDigits);
       
+      // Update our clean state
+      const oldCleanLength = currentCleanPhoneNumber.length;
+      currentCleanPhoneNumber = localDigits;
+      console.log('Estado limpo atualizado:', currentCleanPhoneNumber);
+      
+      // Calculate cursor position in clean digits
+      const cursorInClean = Math.min(currentCleanPhoneNumber.length, oldCleanLength + 1);
+      console.log('Posição do cursor nos dígitos limpos:', cursorInClean);
+      
+      // Format the phone number
+      const newValue = formatPhoneNumber(currentCleanPhoneNumber);
+      console.log('Novo valor formatado:', newValue);
+      
+      // Calculate new cursor position
+      const newCursorPosition = calculateCursorPosition(currentCleanPhoneNumber, cursorInClean);
+      
+      // Update the field
       target.value = newValue;
       
-      // Ensure cursor doesn't go before the +55 prefix
-      if (cursorPosition < 4) {
-        cursorPosition = newValue.length;
-      }
-      
-      console.log('Nova posição do cursor:', cursorPosition);
       // Set cursor position
-      target.setSelectionRange(cursorPosition, cursorPosition);
+      target.setSelectionRange(newCursorPosition, newCursorPosition);
+      console.log('Cursor posicionado em:', newCursorPosition);
       console.log('>>> FIM EVENTO INPUT <<<\n');
     });
 
@@ -444,9 +478,14 @@
     phoneInput?.addEventListener('focus', (e) => {
       const target = e.target;
       console.log('Campo focado. Valor atual:', target.value);
-      if (target.value === '+55 ') {
+      if (currentCleanPhoneNumber === '') {
         target.setSelectionRange(4, 4);
         console.log('Cursor posicionado após +55');
+      } else {
+        // Position cursor at the end
+        const cursorPos = calculateCursorPosition(currentCleanPhoneNumber, currentCleanPhoneNumber.length);
+        target.setSelectionRange(cursorPos, cursorPos);
+        console.log('Cursor posicionado no final:', cursorPos);
       }
     });
 
@@ -457,9 +496,29 @@
       
       console.log('Tecla pressionada:', e.key, 'Posição do cursor:', cursorPosition);
       
-      // Prevent deleting the +55 prefix
-      if ((e.key === 'Backspace' || e.key === 'Delete') && cursorPosition <= 4) {
-        console.log('Tentativa de apagar prefixo +55 bloqueada');
+      // Handle backspace
+      if (e.key === 'Backspace') {
+        if (cursorPosition <= 4) {
+          // Prevent deleting the +55 prefix
+          console.log('Tentativa de apagar prefixo +55 bloqueada');
+          e.preventDefault();
+        } else if (currentCleanPhoneNumber.length > 0) {
+          // Remove the last digit from clean state
+          e.preventDefault();
+          currentCleanPhoneNumber = currentCleanPhoneNumber.slice(0, -1);
+          console.log('Dígito removido, novo estado limpo:', currentCleanPhoneNumber);
+          
+          const newValue = formatPhoneNumber(currentCleanPhoneNumber);
+          target.value = newValue;
+          
+          const newCursorPos = calculateCursorPosition(currentCleanPhoneNumber, currentCleanPhoneNumber.length);
+          target.setSelectionRange(newCursorPos, newCursorPos);
+        }
+      }
+      
+      // Handle delete key
+      if (e.key === 'Delete' && cursorPosition <= 4) {
+        console.log('Tentativa de apagar prefixo +55 com Delete bloqueada');
         e.preventDefault();
       }
     });
@@ -525,6 +584,7 @@
     const phoneInput = document.getElementById('phone');
     if (phoneInput && !phoneInput.value) {
       phoneInput.value = '+55 ';
+      currentCleanPhoneNumber = '';
     }
     
     initializeHiddenFields();
