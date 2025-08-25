@@ -1,0 +1,239 @@
+---
+// Lead Form Component
+---
+
+<div id="lead-modal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <button class="modal-close" id="close-modal">&times;</button>
+    <div class="modal-header">
+      <h3>Agende a Avaliação do seu Bebê</h3>
+      <p>Preencha seus dados e nossa equipe entrará em contato</p>
+    </div>
+    
+    <form id="lead-form" class="lead-form">
+      <div class="form-group">
+        <label for="phone">Telefone *</label>
+        <input 
+          type="tel" 
+          id="phone" 
+          name="phone" 
+          required 
+          placeholder="+55 (11) 99999-9999"
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="email">E-mail (opcional)</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="seu@email.com"
+        />
+      </div>
+      
+      <!-- Hidden fields -->
+      <input type="hidden" name="gclid" id="gclid" />
+      <input type="hidden" name="gbraid" id="gbraid" />
+      <input type="hidden" name="fbclid" id="fbclid" />
+      <input type="hidden" name="utm_source" id="utm_source" />
+      <input type="hidden" name="utm_medium" id="utm_medium" />
+      <input type="hidden" name="utm_campaign" id="utm_campaign" />
+      <input type="hidden" name="utm_content" id="utm_content" />
+      <input type="hidden" name="utm_term" id="utm_term" />
+      <input type="hidden" name="page_url" id="page_url" />
+      <input type="hidden" name="fbc" id="fbc" />
+      <input type="hidden" name="fbp" id="fbp" />
+      <input type="hidden" name="user_agent" id="user_agent" />
+      <input type="hidden" name="user_ip" id="user_ip" />
+      <input type="hidden" name="google_session_attribute" id="google_session_attribute" />
+      
+      <button type="submit" class="submit-btn" id="submit-btn">
+        <span class="btn-text">Agendar Avaliação</span>
+        <span class="btn-loading hidden">Enviando...</span>
+      </button>
+    </form>
+    
+    <div id="success-message" class="success-message hidden">
+      <div class="success-icon">✓</div>
+      <h4>Dados enviados com sucesso!</h4>
+      <p>Nossa equipe entrará em contato em breve.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+  }
+  
+  .modal-overlay.hidden {
+    display: none;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 480px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+  }
+  
+  .modal-close:hover {
+    background: #f3f4f6;
+    color: #333;
+  }
+  
+  .modal-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .modal-header h3 {
+    color: #74B077;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+  }
+  
+  .modal-header p {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .form-group input {
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #74B077;
+  }
+  
+  .submit-btn {
+    background: linear-gradient(135deg, #74B077 0%, #3C81A4 100%);
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+  
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(116, 176, 119, 0.3);
+  }
+  
+  .submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .btn-loading.hidden,
+  .btn-text.hidden {
+    display: none;
+  }
+  
+  .success-message {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .success-message.hidden {
+    display: none;
+  }
+  
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    background: #74B077;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 16px;
+  }
+  
+  .success-message h4 {
+    color: #74B077;
+    font-size: 20px;
+    margin: 0 0 8px 0;
+  }
+  
+  .success-message p {
+    color: #666;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .modal-content {
+      padding: 24px;
+      margin: 16px;
+    }
+  }
+</style>
+
+<script type="module" src="../scripts/leadForm.js"></script>
