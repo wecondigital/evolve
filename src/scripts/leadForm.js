@@ -186,6 +186,14 @@ function initializeForm() {
       
     } catch (error) {
       console.error('Error submitting form:', error);
+      console.error('Full error object:', JSON.stringify(error, null, 2));
+      
+      // Show more specific error message to user
+      let errorMessage = 'Erro ao enviar formulário. Tente novamente.';
+      if (error.message) {
+        errorMessage = `Erro: ${error.message}`;
+      }
+      
       alert('Erro ao enviar formulário. Tente novamente.');
     } finally {
       // Reset button state
