@@ -280,6 +280,36 @@
   // Phone number state management
   let currentCleanPhoneNumber = '';
 
+  // Deduce what digit was added based on the difference between old and new clean numbers
+  function deduceDigitChange(oldClean, newClean) {
+    console.log('=== DEDUÇÃO DE MUDANÇA ===');
+    console.log('Número limpo anterior:', oldClean);
+    console.log('Número limpo atual:', newClean);
+    
+    if (newClean.length > oldClean.length) {
+      // Digit was added
+      const addedDigit = newClean[newClean.length - 1];
+      console.log('Dígito adicionado:', addedDigit);
+      return {
+        type: 'add',
+        digit: addedDigit,
+        position: oldClean.length
+      };
+    } else if (newClean.length < oldClean.length) {
+      // Digit was removed
+      console.log('Dígito removido');
+      return {
+        type: 'remove',
+        position: newClean.length
+      };
+    } else {
+      // No change or replacement
+      console.log('Nenhuma mudança detectada');
+      return {
+        type: 'none'
+      };
+    }
+  }
   // Phone formatting function
   function formatPhoneNumber(cleanDigits) {
     console.log('=== INÍCIO formatPhoneNumber ===');
@@ -328,25 +358,20 @@
   function calculateCursorPosition(cleanDigits, cursorInClean) {
     console.log('Calculando posição do cursor para:', cleanDigits, 'cursor em:', cursorInClean);
     
-    // Base position starts after "+55 "
-    let position = 4;
+    let position = 0;
+    let digitCount = 0;
     
-    if (cursorInClean <= 0) {
-      return position;
-    }
+    // Build the formatted string character by character and count position
+    const formatted = formatPhoneNumber(cleanDigits);
     
-    if (cursorInClean <= 2) {
-      // Within DDD, add opening parenthesis
-      position += 1 + cursorInClean; // "(" + digits
-    } else if (cursorInClean <= 6) {
-      // Within first part of phone number
-      position += 4 + (cursorInClean - 2); // "(XX) " + digits
-    } else if (cursorInClean <= 10) {
-      // Within second part of phone number (after dash)
-      position += 9 + (cursorInClean - 6); // "(XX) XXXX-" + digits
-    } else {
-      // Beyond 10 digits (mobile)
-      position += 10 + (cursorInClean - 7); // "(XX) XXXXX-" + digits
+    for (let i = 0; i < formatted.length && digitCount < cursorInClean; i++) {
+      const char = formatted[i];
+      position++;
+      
+      // If it's a digit, increment our digit counter
+      if (/\d/.test(char)) {
+        digitCount++;
+      }
     }
     
     console.log('Posição calculada do cursor:', position);
@@ -436,7 +461,6 @@
     phoneInput?.addEventListener('input', (e) => {
       const target = e.target;
       console.log('>>> EVENTO INPUT DISPARADO <<<');
-      console.log('Valor atual do campo:', target.value);
       
       // Get only the digits from the current value
       const allDigits = target.value.replace(/\D/g, '');
@@ -449,13 +473,24 @@
       }
       console.log('Dígitos locais extraídos:', localDigits);
       
-      // Update our clean state
-      const oldCleanLength = currentCleanPhoneNumber.length;
-      currentCleanPhoneNumber = localDigits;
+      // Deduce what changed
+      const change = deduceDigitChange(currentCleanPhoneNumber, localDigits);
+      
+      // Apply the deduced change to our clean state
+      if (change.type === 'add') {
+        // Add the digit at the correct position (always at the end for normal typing)
+        currentCleanPhoneNumber = currentCleanPhoneNumber + change.digit;
+        console.log('Dígito adicionado ao estado limpo:', change.digit);
+      } else if (change.type === 'remove') {
+        // Remove the last digit
+        currentCleanPhoneNumber = currentCleanPhoneNumber.slice(0, -1);
+        console.log('Dígito removido do estado limpo');
+      }
+      
       console.log('Estado limpo atualizado:', currentCleanPhoneNumber);
       
-      // Calculate cursor position in clean digits
-      const cursorInClean = Math.min(currentCleanPhoneNumber.length, oldCleanLength + 1);
+      // Calculate cursor position in clean digits (always at the end for normal typing)
+      const cursorInClean = currentCleanPhoneNumber.length;
       console.log('Posição do cursor nos dígitos limpos:', cursorInClean);
       
       // Format the phone number
