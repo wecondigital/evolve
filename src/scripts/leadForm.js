@@ -12,7 +12,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 // Submit lead function
 async function submitLead(lead) {
   const { data, error } = await supabase
-    .from('leads_evolve')
+    .from('leads')
     .insert([lead]);
   
   if (error) {
