@@ -18,6 +18,7 @@
           id="phone" 
           name="phone" 
           required 
+          value="+55 "
           placeholder="+55 (11) 99999-9999"
         />
       </div>
@@ -262,20 +263,36 @@
   }
 
   // Phone formatting function
-  function formatPhone(value) {
-    const numbers = value.replace(/\D/g, '');
-    
-    if (numbers.length <= 2) {
-      return `+${numbers}`;
-    } else if (numbers.length <= 4) {
-      return `+${numbers.slice(0, 2)} (${numbers.slice(2)})`;
-    } else if (numbers.length <= 9) {
-      return `+${numbers.slice(0, 2)} (${numbers.slice(2, 4)}) ${numbers.slice(4)}`;
-    } else if (numbers.length <= 10) {
-      return `+${numbers.slice(0, 2)} (${numbers.slice(2, 4)}) ${numbers.slice(4, 8)}-${numbers.slice(8)}`;
-    } else {
-      return `+${numbers.slice(0, 2)} (${numbers.slice(2, 4)}) ${numbers.slice(4, 9)}-${numbers.slice(9, 13)}`;
+  function formatPhoneNumber(value) {
+    // Always ensure it starts with +55
+    if (!value.startsWith('+55')) {
+      value = '+55 ';
     }
+
+    // Extract only the numbers after +55
+    const afterPrefix = value.substring(4);
+    const numbers = afterPrefix.replace(/\D/g, '');
+
+    // Format based on the number of digits
+    let formatted = '+55 ';
+
+    if (numbers.length === 0) {
+      return formatted;
+    } else if (numbers.length <= 2) {
+      // DDD only
+      formatted += `(${numbers}`;
+    } else if (numbers.length <= 6) {
+      // DDD + partial number
+      formatted += `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
+    } else if (numbers.length <= 10) {
+      // DDD + 8 digits (landline)
+      formatted += `(${numbers.slice(0, 2)}) ${numbers.slice(2, 6)}-${numbers.slice(6)}`;
+    } else {
+      // DDD + 9 digits (mobile)
+      formatted += `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+    }
+
+    return formatted;
   }
 
   // Get URL parameters
@@ -375,16 +392,36 @@
     // Phone formatting
     phoneInput?.addEventListener('input', (e) => {
       const target = e.target;
-      const cursorPosition = target.selectionStart;
-      const oldValue = target.value;
-      const newValue = formatPhone(target.value);
+      let cursorPosition = target.selectionStart;
+      const newValue = formatPhoneNumber(target.value);
       
       target.value = newValue;
       
-      // Maintain cursor position
-      if (cursorPosition !== null) {
-        const diff = newValue.length - oldValue.length;
-        target.setSelectionRange(cursorPosition + diff, cursorPosition + diff);
+      // Ensure cursor doesn't go before the +55 prefix
+      if (cursorPosition < 4) {
+        cursorPosition = newValue.length;
+      }
+      
+      // Set cursor position
+      target.setSelectionRange(cursorPosition, cursorPosition);
+    });
+
+    // Handle focus to position cursor correctly
+    phoneInput?.addEventListener('focus', (e) => {
+      const target = e.target;
+      if (target.value === '+55 ') {
+        target.setSelectionRange(4, 4);
+      }
+    });
+
+    // Handle keydown to prevent deleting the +55 prefix
+    phoneInput?.addEventListener('keydown', (e) => {
+      const target = e.target;
+      const cursorPosition = target.selectionStart;
+      
+      // Prevent deleting the +55 prefix
+      if ((e.key === 'Backspace' || e.key === 'Delete') && cursorPosition <= 4) {
+        e.preventDefault();
       }
     });
     
@@ -445,6 +482,12 @@
 
   // Initialize everything immediately when script loads
   document.addEventListener('DOMContentLoaded', () => {
+    // Initialize phone field with +55 prefix
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput && !phoneInput.value) {
+      phoneInput.value = '+55 ';
+    }
+    
     initializeHiddenFields();
     initializeModal();
     initializeForm();
