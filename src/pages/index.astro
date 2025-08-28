@@ -425,6 +425,16 @@ Muito sucesso ❤️"</p>
 			ctaButtons.forEach(btn => {
 				btn.addEventListener('click', (e) => {
 					e.preventDefault();
+					
+					// Enviar evento para Google Tag Manager
+					if (typeof window !== 'undefined' && window.dataLayer) {
+						window.dataLayer.push({
+							'event': 'clique-botao-contato',
+							'button_text': btn.textContent?.trim() || 'CTA Button',
+							'button_location': window.location.pathname
+						});
+					}
+					
 					const modal = document.getElementById('lead-modal');
 					if (modal) {
 						modal.classList.remove('hidden');
