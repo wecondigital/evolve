@@ -149,6 +149,46 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 
+	<!-- Como é feito o atendimento -->
+	<section class="treatment-section">
+		<div class="container">
+			<div class="treatment-content">
+				<div class="treatment-text-content">
+					<h2>Como é feito o atendimento com a Osteopatia Pediátrica</h2>
+					<p class="treatment-intro">O atendimento é realizado na melhor posição para o bebê, respeitando a sensibilidade de cada um.</p>
+					
+					<p>A osteopatia é uma técnica de terapia manual da fisioterapia que tem o objetivo de tratar os desequilíbrios do corpo. O bebê pode apresentar tensões decorrentes do posicionamento pélvico ou na hora do parto, que atrapalham o desenvolvimento do bebê.</p>
+					
+					<p><strong>Quanto mais cedo começar o tratamento com o bebê, menos sessões serão necessárias.</strong></p>
+					
+					<p>Nas fotos, temos o Dr. Gustavo e sua equipe atendendo seus pacientes. Como pode-se perceber, o tratamento é bem aceito pelos pacientes.</p>
+					
+					<div class="symptoms-box">
+						<h3>Sintomas que a Osteopatia pode tratar:</h3>
+						<ul>
+							<li>Choros sem causa aparente</li>
+							<li>Dificuldade para dormir</li>
+							<li>Dificuldade para sentar ou engatinhar</li>
+							<li>Assimetrias cranianas</li>
+							<li>Refluxo</li>
+							<li>Disquesia</li>
+							<li>Cólicas</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="treatment-images">
+					<div class="treatment-image-polaroid first-image">
+						<img src="/images/tratamento-osteopatia-evolve.jpg" alt="Dr. Gustavo realizando tratamento de osteopatia pediátrica" />
+					</div>
+					<div class="treatment-image-polaroid second-image">
+						<img src="/images/tratamento-osteopatia-dr-gustavo-mondoni-evolve.jpg" alt="Tratamento de osteopatia pediátrica na Evolve" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Diferenciais -->
 	<section class="differentials">
 		<div class="container">
@@ -652,6 +692,123 @@ Muito sucesso ❤️"</p>
 		text-align: center;
 	}
 
+	/* Treatment Section */
+	.treatment-section {
+		background: linear-gradient(135deg, #fef7ff 0%, #f3e8ff 100%);
+		padding: 80px 0;
+	}
+
+	.treatment-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: start;
+	}
+
+	.treatment-text-content h2 {
+		color: #74B077;
+		text-align: left;
+		margin-bottom: 24px;
+		font-size: 2.2rem;
+	}
+
+	.treatment-intro {
+		font-size: 1.2rem;
+		color: #74B077;
+		font-weight: 600;
+		margin-bottom: 24px;
+		line-height: 1.5;
+	}
+
+	.treatment-text-content p {
+		color: #666;
+		line-height: 1.6;
+		margin-bottom: 20px;
+		font-size: 1.1rem;
+	}
+
+	.treatment-text-content p strong {
+		color: #3C81A4;
+		font-weight: 600;
+	}
+
+	.symptoms-box {
+		background: white;
+		border-radius: 16px;
+		padding: 24px;
+		margin-top: 32px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		border-left: 4px solid #74B077;
+	}
+
+	.symptoms-box h3 {
+		color: #74B077;
+		font-size: 1.3rem;
+		margin-bottom: 16px;
+		text-align: left;
+	}
+
+	.symptoms-box ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.symptoms-box li {
+		color: #666;
+		margin-bottom: 8px;
+		padding-left: 24px;
+		position: relative;
+		font-size: 1rem;
+	}
+
+	.symptoms-box li::before {
+		content: "•";
+		color: #74B077;
+		font-weight: bold;
+		position: absolute;
+		left: 0;
+		font-size: 1.2rem;
+	}
+
+	.treatment-images {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.treatment-image-polaroid {
+		background: white;
+		padding: 12px 12px 40px 12px;
+		border-radius: 8px;
+		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+		max-width: 280px;
+		transition: transform 0.3s ease;
+	}
+
+	.treatment-image-polaroid:hover {
+		transform: scale(1.05);
+	}
+
+	.treatment-image-polaroid.first-image {
+		transform: rotate(-3deg);
+		z-index: 2;
+	}
+
+	.treatment-image-polaroid.second-image {
+		transform: rotate(2deg) translateX(-20px);
+		z-index: 1;
+	}
+
+	.treatment-image-polaroid img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		border-radius: 4px;
+	}
+
 	/* Differentials Section */
 	.differentials {
 		background: white;
@@ -1092,6 +1249,38 @@ Muito sucesso ❤️"</p>
 
 		.clinic-image img {
 			height: 240px;
+		}
+
+		.treatment-content {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.treatment-text-content h2 {
+			font-size: 1.8rem;
+			text-align: center;
+		}
+
+		.treatment-images {
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.treatment-image-polaroid {
+			max-width: 200px;
+		}
+
+		.treatment-image-polaroid.first-image {
+			transform: rotate(-2deg);
+		}
+
+		.treatment-image-polaroid.second-image {
+			transform: rotate(2deg) translateX(0);
+		}
+
+		.treatment-image-polaroid img {
+			height: 150px;
 		}
 	}
 </style>
