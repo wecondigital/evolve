@@ -402,6 +402,17 @@ Muito sucesso ❤️"</p>
 		</div>
 	</footer>
 
+	<!-- Thin Footer Section -->
+	<section class="thin-footer">
+		<div class="container">
+			<p class="thin-footer-text">
+				Copyright © {new Date().getFullYear()} - Todos os direitos reservados. CNPJ: 34.413.538/0001-40
+				<br>
+				Página desenvolvida por <a href="https://wecondigital.com.br/" target="_blank" rel="noopener noreferrer">Wecon</a>
+			</p>
+		</div>
+	</section>
+
 	<LeadForm client:load />
 </Layout>
 
@@ -1100,6 +1111,32 @@ Muito sucesso ❤️"</p>
 
 	.whatsapp-icon {
 		font-size: 1.2rem;
+	}
+
+	/* Thin Footer Section */
+	.thin-footer {
+		background: #111827;
+		padding: 10px 0;
+		border-top: 1px solid #374151;
+	}
+
+	.thin-footer-text {
+		text-align: center;
+		font-size: 0.75rem;
+		color: #9ca3af;
+		margin: 0;
+		line-height: 1.4;
+	}
+
+	.thin-footer-text a {
+		color: #74B077;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.thin-footer-text a:hover {
+		color: #86efac;
+		text-decoration: underline;
 	}
 
 	/* Responsive Design */
