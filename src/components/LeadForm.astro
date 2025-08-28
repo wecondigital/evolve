@@ -420,6 +420,19 @@
         
         await submitLead(lead);
         
+        // Enviar evento para Google Tag Manager
+        if (typeof window !== 'undefined' && window.dataLayer) {
+          window.dataLayer.push({
+            'event': 'form-enviado',
+            'form_name': 'lead_form',
+            'phone': lead.phone,
+            'email': lead.email || '',
+            'utm_source': lead.utm_source || '',
+            'utm_medium': lead.utm_medium || '',
+            'utm_campaign': lead.utm_campaign || ''
+          });
+        }
+        
         // Redirect to WhatsApp
         window.location.href = 'https://api.whatsapp.com/send?phone=5511959774208&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Osteopatia%20Infantil.';
         
