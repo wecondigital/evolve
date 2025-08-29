@@ -12,6 +12,17 @@
     
     <form id="lead-form" class="lead-form">
       <div class="form-group">
+        <label for="name">Nome *</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          required 
+          placeholder="Seu nome completo"
+        />
+      </div>
+      
+      <div class="form-group">
         <label for="phone">Telefone *</label>
         <input 
           type="tel" 
@@ -400,6 +411,7 @@
       try {
         const formData = new FormData(form);
         const lead = {
+          name: formData.get('name'),
           phone: formData.get('phone'),
           email: formData.get('email') || undefined,
           gclid: formData.get('gclid') || undefined,
@@ -425,6 +437,7 @@
           window.dataLayer.push({
             'event': 'form-enviado',
             'form_name': 'lead_form',
+            'name': lead.name || '',
             'phone': lead.phone,
             'email': lead.email || '',
             'utm_source': lead.utm_source || '',
