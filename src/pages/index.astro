@@ -1,7 +1,6 @@
 ---
 import LeadForm from '../components/LeadForm.astro';
 import Layout from '../layouts/Layout.astro';
-import { CheckCircle, XCircle } from 'lucide-astro';
 ---
 
 <Layout>
@@ -304,22 +303,22 @@ Muito sucesso"</p>
 				<div class="comparison-card positive">
 					<h3>Com tratamento precoce</h3>
 					<ul>
-						<li><CheckCircle size={20} color="#74B077" /> Correção natural da assimetria</li>
-						<li><CheckCircle size={20} color="#74B077" /> Bebê mais tranquilo, dormindo melhor</li>
-						<li><CheckCircle size={20} color="#74B077" /> Menor necessidade de intervenções futuras</li>
-						<li><CheckCircle size={20} color="#74B077" /> Desenvolvimento motor saudável</li>
-						<li><CheckCircle size={20} color="#74B077" /> Prevenção de problemas posturais</li>
+						<li>✅ Correção natural da assimetria</li>
+						<li>✅ Bebê mais tranquilo, dormindo melhor</li>
+						<li>✅ Menor necessidade de intervenções futuras</li>
+						<li>✅ Desenvolvimento motor saudável</li>
+						<li>✅ Prevenção de problemas posturais</li>
 					</ul>
 				</div>
 				
 				<div class="comparison-card negative">
 					<h3>Sem tratamento</h3>
 					<ul>
-						<li><XCircle size={20} color="#ef4444" /> Assimetria pode persistir</li>
-						<li><XCircle size={20} color="#ef4444" /> Risco de atrasos motores/posturais</li>
-						<li><XCircle size={20} color="#ef4444" /> Tratamentos mais complexos no futuro</li>
-						<li><XCircle size={20} color="#ef4444" /> Possíveis problemas de autoestima</li>
-						<li><XCircle size={20} color="#ef4444" /> Maior custo a longo prazo</li>
+						<li>❌ Assimetria pode persistir</li>
+						<li>❌ Risco de atrasos motores/posturais</li>
+						<li>❌ Tratamentos mais complexos no futuro</li>
+						<li>❌ Possíveis problemas de autoestima</li>
+						<li>❌ Maior custo a longo prazo</li>
 					</ul>
 				</div>
 			</div>
@@ -979,9 +978,6 @@ Muito sucesso"</p>
 	.comparison-card li {
 		margin-bottom: 12px;
 		font-size: 1.1rem;
-		display: flex;
-		align-items: center;
-		gap: 12px;
 	}
 
 	/* FAQ Section */
