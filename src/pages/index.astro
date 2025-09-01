@@ -102,6 +102,34 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 
+	<!-- O que é Assimetria Craniana -->
+	<section class="cranial-asymmetry">
+		<div class="container">
+			<div class="cranial-asymmetry-content">
+				<div class="cranial-asymmetry-text">
+					<h2>O que é Assimetria Craniana?</h2>
+					<p class="cranial-asymmetry-intro">A assimetria craniana é uma condição comum em bebês, onde a cabeça apresenta formato irregular ou achatado.</p>
+					
+					<p>Isso acontece quando o bebê passa muito tempo na mesma posição, seja no útero, durante o parto ou após o nascimento. A pressão constante em uma área específica da cabeça pode causar o achatamento.</p>
+					
+					<p><strong>É importante saber que:</strong></p>
+					<ul>
+						<li>É mais comum do que você imagina</li>
+						<li>Não afeta a inteligência do bebê</li>
+						<li>Quanto mais cedo for tratada, melhor o resultado</li>
+						<li>O tratamento é natural e indolor</li>
+					</ul>
+					
+					<p>A osteopatia pediátrica é uma das formas mais eficazes e suaves de corrigir essa condição, ajudando o crânio do bebê a retomar sua forma natural.</p>
+				</div>
+				
+				<div class="cranial-asymmetry-image">
+					<img src="/images/assimetria-craniana.jpg" alt="Exemplo de assimetria craniana em bebê" />
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Benefícios -->
 	<section class="benefits">
 		<div class="container">
@@ -655,6 +683,83 @@ Muito sucesso"</p>
 		max-width: 600px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	/* Cranial Asymmetry Section */
+	.cranial-asymmetry {
+		background: linear-gradient(135deg, #fff8f0 0%, #fef3e2 100%);
+		padding: 80px 0;
+	}
+
+	.cranial-asymmetry-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.cranial-asymmetry-text h2 {
+		color: #74B077;
+		text-align: left;
+		margin-bottom: 24px;
+		font-size: 2.2rem;
+	}
+
+	.cranial-asymmetry-intro {
+		font-size: 1.2rem;
+		color: #74B077;
+		font-weight: 600;
+		margin-bottom: 24px;
+		line-height: 1.5;
+	}
+
+	.cranial-asymmetry-text p {
+		color: #666;
+		line-height: 1.6;
+		margin-bottom: 20px;
+		font-size: 1.1rem;
+	}
+
+	.cranial-asymmetry-text p strong {
+		color: #3C81A4;
+		font-weight: 600;
+	}
+
+	.cranial-asymmetry-text ul {
+		list-style: none;
+		padding: 0;
+		margin: 20px 0;
+		background: white;
+		border-radius: 12px;
+		padding: 24px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+	}
+
+	.cranial-asymmetry-text li {
+		color: #666;
+		margin-bottom: 12px;
+		padding-left: 24px;
+		position: relative;
+		font-size: 1rem;
+	}
+
+	.cranial-asymmetry-text li::before {
+		content: "✓";
+		color: #74B077;
+		font-weight: bold;
+		position: absolute;
+		left: 0;
+		font-size: 1.2rem;
+	}
+
+	.cranial-asymmetry-text li:last-child {
+		margin-bottom: 0;
+	}
+
+	.cranial-asymmetry-image img {
+		width: 100%;
+		border-radius: 16px;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 	}
 
 	/* Benefits Section */
@@ -1301,6 +1406,15 @@ Muito sucesso"</p>
 
 		.clinic-image img {
 			height: 240px;
+		}
+
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.cranial-asymmetry-text h2 {
+			font-size: 1.8rem;
+			text-align: center;
 		}
 
 		.treatment-content {
