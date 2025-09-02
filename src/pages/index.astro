@@ -102,26 +102,35 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 
-	<!-- O que é assimetria craniana -->
-	<section class="cranial-asymmetry">
-		<div class="container">
-			<div class="cranial-asymmetry-content">
-				<div class="cranial-asymmetry-text">
-					<h2>O que é assimetria craniana?</h2>
-					<p class="cranial-asymmetry-intro">A assimetria craniana é uma condição comum em bebês, onde a cabeça apresenta formato irregular ou achatado.</p>
-					
-					<p>Isso acontece quando o bebê passa muito tempo na mesma posição, seja no útero, durante o parto ou após o nascimento. A pressão constante em uma área específica da cabeça pode causar o achatamento.</p>
-					
-					<p><strong>É importante saber que:</strong></p>
-					<ul>
-						<li>É mais comum do que você imagina</li>
-						<li>Não afeta a inteligência do bebê</li>
-						<li>Quanto mais cedo for tratada, melhor o resultado</li>
-						<li>O tratamento é natural e indolor</li>
-					</ul>
-					
-					<p>A <strong>osteopatia pediátrica</strong> é uma das formas mais eficazes e suaves de corrigir essa condição, ajudando o crânio do bebê a retomar sua forma natural.</p>
+<!-- O que é assimetria craniana -->
+<section class="cranial-asymmetry">
+	<div class="container">
+		<div class="cranial-asymmetry-content">
+			<div class="cranial-asymmetry-text">
+				<h2>O que é assimetria craniana?</h2>
+				
+				<!-- Imagem movida para cima, logo após o título -->
+				<div class="cranial-asymmetry-image-top">
+					<img src="/images/assimetria-craniana.jpg" alt="Exemplo de assimetria craniana em bebê" />
 				</div>
+				
+				<p class="cranial-asymmetry-intro">A assimetria craniana é uma condição comum em bebês, onde a cabeça apresenta formato irregular ou achatado.</p>
+				
+				<p>Isso acontece quando o bebê passa muito tempo na mesma posição, seja no útero, durante o parto ou após o nascimento. A pressão constante em uma área específica da cabeça pode causar o achatamento.</p>
+				
+				<p><strong>É importante saber que:</strong></p>
+				<ul>
+					<li>É mais comum do que você imagina</li>
+					<li>Não afeta a inteligência do bebê</li>
+					<li>Quanto mais cedo for tratada, melhor o resultado</li>
+					<li>O tratamento é natural e indolor</li>
+				</ul>
+				
+				<p>A <strong>osteopatia pediátrica</strong> é uma das formas mais eficazes e suaves de corrigir essa condição, ajudando o crânio do bebê a retomar sua forma natural.</p>
+			</div>
+		</div>
+	</div>
+</section>
 				
 				<div class="cranial-asymmetry-image">
 					<img src="/images/assimetria-craniana.jpg" alt="Exemplo de assimetria craniana em bebê" />
@@ -1507,6 +1516,34 @@ Muito sucesso"</p>
 		.treatment-image-polaroid img {
 			height: 150px;
 		}
+    /* CSS adicional para a imagem reposicionada */
+.cranial-asymmetry-image-top {
+	text-align: center;
+	margin: 32px 0 40px 0;
+}
+
+.cranial-asymmetry-image-top img {
+	max-width: 500px;
+	width: 100%;
+	border-radius: 16px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+/* Remover ou comentar o CSS da imagem antiga */
+/*
+.cranial-asymmetry-image img {
+	max-width: 400px;
+	border-radius: 16px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+*/
+
+/* Responsive para dispositivos móveis */
+@media (max-width: 768px) {
+	.cranial-asymmetry-image-top img {
+		max-width: 100%;
+	}
+}
 	}
 </style>
 
