@@ -1,9 +1,12 @@
 ---
 import LeadForm from '../components/LeadForm.astro';
 import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Osteopatia Pediátrica - Evolve Saúde Integral";
+const pageDescription = "Tratamento natural e seguro para assimetria craniana e torcicolo congênito em bebês de 0 a 6 meses. Agende uma avaliação.";
 ---
 
-<Layout>
+<Layout title={pageTitle} description={pageDescription}>
 	<!-- Fixed Header -->
 	<header class="fixed-header">
 		<div class="header-container">

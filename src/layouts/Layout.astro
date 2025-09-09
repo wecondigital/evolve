@@ -1,3 +1,15 @@
+---
+export interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "Osteopatia Pediátrica - Evolve Saúde Integral",
+	description = "Tratamento natural e seguro para assimetria craniana e torcicolo congênito em bebês de 0 a 6 meses. Agende uma avaliação."
+} = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -13,8 +25,8 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/jpeg" href="/images/favicon-evolve.jpg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Osteopatia Pediátrica - Evolve Saúde Integral</title>
-		<meta name="description" content="Tratamento natural e seguro para assimetria craniana e torcicolo congênito em bebês de 0 a 6 meses. Agende uma avaliação." />
+		<title>{title}</title>
+		<meta name="description" content={description} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
