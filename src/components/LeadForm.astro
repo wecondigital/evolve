@@ -1,8 +1,15 @@
 ---
 // Lead Form Component
+export interface Props {
+  whatsappMessage?: string;
+}
+
+const { 
+  whatsappMessage = "Olá! Gostaria de mais informações sobre Osteopatia Infantil."
+} = Astro.props;
 ---
 
-<div id="lead-modal" class="modal-overlay hidden">
+<div id="lead-modal" class="modal-overlay hidden" data-whatsapp-message={whatsappMessage}>
   <div class="modal-content">
     <button class="modal-close" id="close-modal">&times;</button>
     <div class="modal-header">
@@ -447,7 +454,10 @@
         }
         
         // Redirect to WhatsApp
-        window.location.href = 'https://api.whatsapp.com/send?phone=5511959774208&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Osteopatia%20Infantil.';
+        const modal = document.getElementById('lead-modal');
+        const customMessage = modal?.getAttribute('data-whatsapp-message') || 'Olá! Gostaria de mais informações sobre Osteopatia Infantil.';
+        const encodedMessage = encodeURIComponent(customMessage);
+        window.location.href = `https://api.whatsapp.com/send?phone=5511959774208&text=${encodedMessage}`;
         
       } catch (error) {
         console.error('Error submitting form:', error);
