@@ -332,6 +332,28 @@ const pageDescription = "Tratamento natural e seguro com osteopatia pediátrica 
 		</div>
 	</section>
 
+	<!-- Antes e Depois -->
+	<section class="before-after-section">
+		<div class="container">
+			<h2>Resultados que transformam: Antes e Depois</h2>
+			<p class="before-after-description">Veja a evolução real de bebês que passaram pelo tratamento de torcicolo congênito com osteopatia pediátrica na Evolve Saúde.</p>
+			<div class="before-after-gallery">
+				<div class="before-after-item">
+					<img src="/images/torcicolo-antes-depois-1.jpeg" alt="Bebê antes e depois do tratamento de torcicolo congênito - Caso 1" />
+				</div>
+				<div class="before-after-item">
+					<img src="/images/torcicolo-antes-depois-2.jpeg" alt="Bebê antes e depois do tratamento de torcicolo congênito - Caso 2" />
+				</div>
+				<div class="before-after-item">
+					<img src="/images/torcicolo-antes-depois-3.jpeg" alt="Bebê antes e depois do tratamento de torcicolo congênito - Caso 3" />
+				</div>
+			</div>
+			<div class="before-after-cta">
+				<button class="cta-btn cta-primary">Agende a avaliação do seu bebê</button>
+			</div>
+		</div>
+	</section>
+
 	<!-- FAQ -->
 	<section class="faq">
 		<div class="container">
@@ -469,6 +491,14 @@ const pageDescription = "Tratamento natural e seguro com osteopatia pediátrica 
 		} else {
 			// Retry if buttons not found yet
 			setTimeout(initializeCTAButtons, 100);
+		}
+
+		.before-after-gallery {
+			grid-template-columns: 1fr;
+		}
+
+		.before-after-item img {
+			height: 280px;
 		}
 	}
 
@@ -1337,6 +1367,59 @@ const pageDescription = "Tratamento natural e seguro com osteopatia pediátrica 
 	}
 
 	.clinic-cta {
+		text-align: center;
+	}
+
+	/* Before and After Section */
+	.before-after-section {
+		background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+		padding: 80px 0;
+	}
+
+	.before-after-description {
+		text-align: center;
+		font-size: 1.2rem;
+		color: #666;
+		max-width: 800px;
+		margin: 0 auto 48px;
+		line-height: 1.6;
+	}
+
+	.before-after-gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 32px;
+		margin-bottom: 48px;
+	}
+
+	.before-after-item {
+		position: relative;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease;
+		background: white;
+		padding: 8px;
+	}
+
+	.before-after-item:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+	}
+
+	.before-after-item img {
+		width: 100%;
+		height: 350px;
+		object-fit: cover;
+		border-radius: 12px;
+		transition: transform 0.3s ease;
+	}
+
+	.before-after-item:hover img {
+		transform: scale(1.02);
+	}
+
+	.before-after-cta {
 		text-align: center;
 	}
 
