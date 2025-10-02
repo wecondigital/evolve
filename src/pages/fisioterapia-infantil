@@ -2,8 +2,8 @@
 import LeadForm from '../components/LeadForm.astro';
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = "Osteopatia Pediátrica - Evolve Saúde Integral";
-const pageDescription = "Tratamento natural e seguro para assimetria craniana e torcicolo congênito em bebês de 0 a 6 meses. Agende uma avaliação.";
+const pageTitle = "Fisioterapia Infantil - Evolve Saúde Integral";
+const pageDescription = "Fisioterapia especializada para bebês e crianças. Desenvolvimento motor, osteopatia pediátrica e tratamentos naturais para o crescimento saudável.";
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -22,8 +22,8 @@ const pageDescription = "Tratamento natural e seguro para assimetria craniana e 
 		<div class="container">
 			<div class="hero-content">
 				<div class="hero-text">
-					<h1>Seu bebê merece crescer livre de desconfortos e assimetrias</h1>
-					<p class="hero-subtitle">A Osteopatia Pediátrica é um tratamento natural, seguro e indolor para corrigir a assimetria craniana e o torcicolo congênito nos primeiros meses de vida.</p>
+					<h1>Fisioterapia Infantil: cuidado especializado para o desenvolvimento do seu bebê</h1>
+					<p class="hero-subtitle">Nossa abordagem integra fisioterapia e osteopatia pediátrica para promover o desenvolvimento motor saudável, tratar desconfortos e prevenir atrasos no crescimento dos pequenos.</p>
 					<button class="cta-btn cta-primary">Agende a avaliação do seu bebê</button>
 				</div>
 				<div class="hero-image">
@@ -36,7 +36,7 @@ const pageDescription = "Tratamento natural e seguro para assimetria craniana e 
 	<!-- Problema / Identificação -->
 	<section class="problems">
 		<div class="container">
-			<h2>Você notou algum desses sinais no seu bebê?</h2>
+			<h2>Seu bebê apresenta algum desses sinais de desenvolvimento?</h2>
 			<div class="problems-grid">
 				<div class="problem-card">
 					<div class="problem-image">
@@ -44,7 +44,7 @@ const pageDescription = "Tratamento natural e seguro para assimetria craniana e 
 					</div>
 					<div class="problem-content">
 						
-						<h3>Cabeça com formato achatado ou assimétrico</h3>
+						<h3>Atrasos nos marcos motores (rolar, sentar, engatinhar)</h3>
 					</div>
 				</div>
 				
@@ -54,7 +54,7 @@ const pageDescription = "Tratamento natural e seguro para assimetria craniana e 
 					</div>
 					<div class="problem-content">
 						
-						<h3>Prefere olhar sempre para o mesmo lado</h3>
+						<h3>Dificuldades de coordenação e equilíbrio</h3>
 					</div>
 				</div>
 				
@@ -64,7 +64,7 @@ const pageDescription = "Tratamento natural e seguro para assimetria craniana e 
 					</div>
 					<div class="problem-content">
 						
-						<h3>Rigidez no pescoço ou ombros</h3>
+						<h3>Tensões musculares e posturas inadequadas</h3>
 					</div>
 				</div>
 				
@@ -74,7 +74,7 @@ const pageDescription = "Tratamento natural e seguro para assimetria craniana e 
 					</div>
 					<div class="problem-content">
 						
-						<h3>Choro frequente e irritabilidade</h3>
+						<h3>Assimetrias cranianas e faciais</h3>
 					</div>
 				</div>
 				
@@ -84,7 +84,7 @@ const pageDescription = "Tratamento natural e seguro para assimetria craniana e 
 					</div>
 					<div class="problem-content">
 						
-						<h3>Dificuldade para dormir ou mamar</h3>
+						<h3>Problemas respiratórios e posturais</h3>
 					</div>
 				</div>
 				
@@ -94,42 +94,42 @@ const pageDescription = "Tratamento natural e seguro para assimetria craniana e 
 					</div>
 					<div class="problem-content">
 						
-						<h3>Refluxo e cólicas constantes</h3>
+						<h3>Desconfortos digestivos (cólicas, refluxo)</h3>
 					</div>
 				</div>
 			</div>
 			<div class="problems-cta">
-				<p class="problems-text">Esses sinais podem indicar assimetria craniana ou torcicolo congênito. Quanto antes iniciar o tratamento, mais rápido e eficaz será o resultado.</p>
+				<p class="problems-text">Esses sinais podem indicar a necessidade de acompanhamento fisioterapêutico especializado. Quanto antes iniciar o tratamento, melhor será o desenvolvimento motor e postural do seu bebê.</p>
 				<button class="cta-btn cta-secondary">Fale com nossa equipe agora</button>
 			</div>
 		</div>
 	</section>
 
-<!-- O que é assimetria craniana -->
+<!-- O que é Fisioterapia Infantil -->
 <section class="cranial-asymmetry">
 	<div class="container">
 		<div class="cranial-asymmetry-content">
 			<div class="cranial-asymmetry-text">
-				<h2>O que é assimetria craniana?</h2>
+				<h2>O que é Fisioterapia Infantil?</h2>
 				
 				<!-- Imagem movida para cima, logo após o título -->
 				<div class="cranial-asymmetry-image-top">
-					<img src="/images/assimetria-craniana.jpg" alt="Exemplo de assimetria craniana em bebê" />
+					<img src="/images/osteopatia-infantil.jpeg" alt="Fisioterapeuta pediátrico trabalhando com bebê" />
 				</div>
 				
-				<p class="cranial-asymmetry-intro">A assimetria craniana é uma condição comum em bebês, onde a cabeça apresenta formato irregular ou achatado.</p>
+				<p class="cranial-asymmetry-intro">A Fisioterapia Infantil é uma especialidade que cuida do desenvolvimento motor, postural e funcional de bebês e crianças desde o nascimento.</p>
 				
-				<p>Isso acontece quando o bebê passa muito tempo na mesma posição, seja no útero, durante o parto ou após o nascimento. A pressão constante em uma área específica da cabeça pode causar o achatamento.</p>
+				<p>Nossa abordagem combina técnicas de fisioterapia motora com osteopatia pediátrica, oferecendo um cuidado completo e integrado. Trabalhamos com exercícios lúdicos, estimulação sensorial e técnicas manuais suaves para promover o desenvolvimento saudável.</p>
 				
 				<p><strong>É importante saber que:</strong></p>
 				<ul>
-					<li>É mais comum do que você imagina</li>
-					<li>Não afeta a inteligência do bebê</li>
-					<li>Quanto mais cedo for tratada, melhor o resultado</li>
-					<li>O tratamento é natural e indolor</li>
+					<li>Cada bebê tem seu ritmo único de desenvolvimento</li>
+					<li>A intervenção precoce potencializa os resultados</li>
+					<li>Combinamos diversas técnicas para resultados eficazes</li>
+					<li>O tratamento é sempre lúdico e respeitoso</li>
 				</ul>
 				
-				<p>A <strong>osteopatia pediátrica</strong> é uma das formas mais eficazes e suaves de corrigir essa condição, ajudando o crânio do bebê a retomar sua forma natural.</p>
+				<p>A <strong>osteopatia pediátrica</strong> é uma das principais ferramentas que utilizamos, sendo especialmente eficaz para tratar assimetrias, tensões musculares e promover o equilíbrio corporal necessário para um desenvolvimento motor saudável.</p>
 			</div>
 		</div>
 	</div>
@@ -140,42 +140,42 @@ const pageDescription = "Tratamento natural e seguro para assimetria craniana e 
 	<!-- Benefícios -->
 	<section class="benefits">
 		<div class="container">
-			<h2>Os benefícios da osteopatia para o seu bebê</h2>
+			<h2>Os benefícios da Fisioterapia Infantil para o seu bebê</h2>
 			<div class="benefits-grid">
 				<div class="benefit-card">
 					<div class="benefit-icon"></div>
-					<h3>Correção natural e sem dor</h3>
-					<p>Técnicas suaves que respeitam a delicadeza do bebê</p>
+					<h3>Desenvolvimento motor otimizado</h3>
+					<p>Estimula e acelera a aquisição dos marcos motores</p>
 				</div>
 				
 				<div class="benefit-card">
 					<div class="benefit-icon"></div>
-					<h3>Desenvolvimento motor saudável</h3>
-					<p>Promove o crescimento equilibrado e natural</p>
+					<h3>Correção postural precoce</h3>
+					<p>Previne e corrige alterações posturais desde cedo</p>
 				</div>
 				
 				<div class="benefit-card">
 					<div class="benefit-icon"></div>
-					<h3>Melhora no sono e no humor</h3>
-					<p>Bebê mais tranquilo e descansado</p>
+					<h3>Fortalecimento muscular adequado</h3>
+					<p>Desenvolve força e coordenação de forma equilibrada</p>
 				</div>
 				
 				<div class="benefit-card">
 					<div class="benefit-icon"></div>
-					<h3>Prevenção de complicações futuras</h3>
-					<p>Evita problemas posturais e motores</p>
+					<h3>Estimulação sensorial e cognitiva</h3>
+					<p>Promove conexões neurais através do movimento</p>
 				</div>
 				
 				<div class="benefit-card">
 					<div class="benefit-icon"></div>
-					<h3>Resultados visíveis já nas primeiras sessões</h3>
-					<p>Melhoras perceptíveis rapidamente</p>
+					<h3>Abordagem lúdica e divertida</h3>
+					<p>Tratamento através de brincadeiras e atividades prazerosas</p>
 				</div>
 
         <div class="benefit-card">
 					<div class="benefit-icon"></div>
-					<h3>Auxilia no alívio de tensões musculares</h3>
-					<p>Alívio de desconfortos para o seu bebê.</p>
+					<h3>Integração com osteopatia pediátrica</h3>
+					<p>Combina técnicas para resultados mais completos</p>
 				</div>
 			</div>
 			<div class="benefits-cta">
@@ -189,24 +189,25 @@ const pageDescription = "Tratamento natural e seguro para assimetria craniana e 
 		<div class="container">
 			<div class="treatment-content">
 				<div class="treatment-text-content">
-					<h2>Como é feito o atendimento com a Osteopatia Pediátrica</h2>
-					<p class="treatment-intro">O atendimento é realizado na melhor posição para o bebê, respeitando a sensibilidade de cada um.</p>
+					<h2>Como é feito o atendimento com a Fisioterapia Infantil</h2>
+					<p class="treatment-intro">O atendimento é personalizado e lúdico, respeitando o ritmo e as necessidades individuais de cada bebê.</p>
 					
-					<p>A osteopatia é uma técnica de terapia manual da fisioterapia que tem o objetivo de tratar os desequilíbrios do corpo.</p>
+					<p>Nossa fisioterapia infantil utiliza uma abordagem integrada, combinando exercícios motores, estimulação sensorial e osteopatia pediátrica. Cada sessão é planejada de forma individualizada, sempre através de brincadeiras e atividades que estimulam o desenvolvimento natural.</p>
 					
-					<p><strong>Quanto mais cedo começar o tratamento com o bebê, menos sessões serão necessárias.</strong></p>
+					<p><strong>A intervenção precoce na fisioterapia infantil potencializa o desenvolvimento e previne futuras dificuldades motoras.</strong></p>
 					
 								
 					<div class="symptoms-box">
-						<h3>Sintomas que a Osteopatia pode tratar:</h3>
+						<h3>Condições tratadas pela Fisioterapia Infantil:</h3>
 						<ul>
-							<li>Choros sem causa aparente</li>
-							<li>Dificuldade para dormir</li>
-							<li>Dificuldade para sentar ou engatinhar</li>
+							<li>Atrasos no desenvolvimento motor</li>
+							<li>Dificuldades de coordenação e equilíbrio</li>
+							<li>Problemas posturais e assimetrias</li>
 							<li>Assimetrias cranianas</li>
-							<li>Refluxo</li>
-							<li>Disquesia</li>
-							<li>Cólicas</li>
+							<li>Torcicolo congênito</li>
+							<li>Hipotonia (baixo tônus muscular)</li>
+							<li>Dificuldades respiratórias</li>
+							<li>Cólicas e desconfortos digestivos</li>
 						</ul>
 					</div>
 				</div>
@@ -286,7 +287,7 @@ const pageDescription = "Tratamento natural e seguro para assimetria craniana e 
 	<!-- Depoimentos -->
 	<section class="testimonials">
 		<div class="container">
-			<h2>Histórias reais de transformação</h2>
+			<h2>Histórias reais de sucesso na Fisioterapia Infantil</h2>
 			<div class="testimonials-carousel">
 				<div class="testimonial-card active">
 					<div class="testimonial-content">
@@ -334,28 +335,28 @@ Muito sucesso"</p>
 	<!-- Comparativo -->
 	<section class="comparison">
 		<div class="container">
-			<h2>Com ou sem tratamento: qual caminho você escolhe?</h2>
+			<h2>Com ou sem Fisioterapia Infantil: qual caminho você escolhe?</h2>
 			<div class="comparison-grid">
 				<div class="comparison-card positive">
-					<h3>Com tratamento precoce</h3>
+					<h3>Com acompanhamento fisioterapêutico</h3>
 					<ul>
-						<li>- <strong>Correção natural da assimetria:</strong> a osteopatia ajuda a alinhar a cabecinha e o corpinho do bebê de forma suave e sem desconforto.</li>
-						<li>- <strong>Bebê mais tranquilo, dormindo melhor:</strong> alívio de tensões que favorece o sono e reduz irritabilidade.</li>
-						<li>- <strong>Menor necessidade de intervenções futuras:</strong> quanto antes o cuidado acontece, menor a chance de tratamentos mais invasivos no futuro.</li>
-						<li>- <strong>Desenvolvimento motor saudável:</strong> favorece que o bebê atinja os marcos como rolar, engatinhar e andar no tempo certo.</li>
-						<li>- <strong>Prevenção de problemas posturais:</strong> contribui para que cresça com mais equilíbrio, postura adequada e qualidade de vida.</li>
+						<li>- <strong>Desenvolvimento motor acelerado:</strong> estimulação adequada que favorece a aquisição dos marcos motores no tempo ideal.</li>
+						<li>- <strong>Prevenção de atrasos e dificuldades:</strong> identificação e correção precoce de alterações no desenvolvimento.</li>
+						<li>- <strong>Fortalecimento muscular equilibrado:</strong> desenvolvimento da força e coordenação de forma harmoniosa.</li>
+						<li>- <strong>Melhora da qualidade de vida:</strong> bebê mais ativo, confiante e com melhor bem-estar geral.</li>
+						<li>- <strong>Integração sensorial otimizada:</strong> melhor processamento das informações sensoriais para um desenvolvimento completo.</li>
 					</ul>
 				</div>
 				
 				<div class="comparison-card negative">
-					<h3>Sem tratamento</h3>
+					<h3>Sem acompanhamento especializado</h3>
 					<ul>
-						<li>- <strong>Atrasos motores grossos:</strong> dificuldade para rolar, sentar, engatinhar ou andar.</li>
-            <li>- <strong>Atrasos motores finos:</strong> dificuldade em pegar objetos, trocar brinquedos de mão ou usar os dedinhos com precisão.</li>
-						<li>- <strong>Atrasos na linguagem:</strong> demora para balbuciar, emitir sons, falar ou usar gestos. </li>
-						<li>- <strong>Coordenação visual-motora:</strong> dificuldade em empilhar blocos, desenhar ou coordenar olhos e mãos.</li>
-						<li>- <strong>Habilidades sociais:</strong> menor contato visual, atraso no sorriso, dificuldade em responder a estímulos. </li>
-						<li>- <strong>Torcicolo:</strong> pode agravar assimetrias cranianas e atrasar o desenvolvimento motor.</li>
+						<li>- <strong>Atrasos significativos no desenvolvimento:</strong> demora para atingir marcos como sentar, engatinhar e andar.</li>
+						<li>- <strong>Problemas posturais persistentes:</strong> alterações que podem se tornar permanentes sem intervenção.</li>
+						<li>- <strong>Dificuldades de coordenação:</strong> problemas de equilíbrio e coordenação motora que afetam atividades futuras.</li>
+						<li>- <strong>Baixa autoestima e confiança:</strong> dificuldades motoras podem impactar a autoconfiança da criança.</li>
+						<li>- <strong>Necessidade de intervenções mais intensivas:</strong> tratamentos mais longos e complexos no futuro.</li>
+						<li>- <strong>Impacto no desenvolvimento global:</strong> atrasos motores podem afetar aspectos cognitivos e sociais.</li>
 					</ul>
 				</div>
 			</div>
@@ -365,25 +366,35 @@ Muito sucesso"</p>
 	<!-- FAQ -->
 	<section class="faq">
 		<div class="container">
-			<h2>Perguntas Frequentes</h2>
+			<h2>Perguntas Frequentes sobre Fisioterapia Infantil</h2>
 			<div class="faq-list">
 				<div class="faq-item">
 					<button class="faq-question">
-						É doloroso para o bebê?
+						A partir de que idade pode iniciar a fisioterapia infantil?
 						<span class="faq-icon">+</span>
 					</button>
 					<div class="faq-answer">
-						<p>Não, a osteopatia pediátrica é suave, segura e indolor. As técnicas são especialmente desenvolvidas para a delicadeza dos bebês.</p>
+						<p>A fisioterapia infantil pode ser iniciada desde o nascimento. Quanto mais cedo identificarmos e tratarmos possíveis alterações, melhores serão os resultados para o desenvolvimento do bebê.</p>
 					</div>
 				</div>
 				
 				<div class="faq-item">
 					<button class="faq-question">
-						Qual a idade ideal para o tratamento?
+						Como a osteopatia se integra à fisioterapia infantil?
 						<span class="faq-icon">+</span>
 					</button>
 					<div class="faq-answer">
-						<p>Até os 6 meses é o período mais eficaz, pois os ossos do crânio ainda estão em formação e respondem melhor ao tratamento.</p>
+						<p>A osteopatia pediátrica complementa a fisioterapia tratando tensões musculares, assimetrias e desequilíbrios corporais. Juntas, essas técnicas oferecem um cuidado mais completo e eficaz para o desenvolvimento do bebê.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question">
+						O tratamento é doloroso para o bebê?
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Não, nossa abordagem é sempre suave, lúdica e respeitosa. Utilizamos brincadeiras, estímulos sensoriais e técnicas manuais delicadas que são confortáveis e até prazerosas para o bebê.</p>
 					</div>
 				</div>
 				
@@ -393,7 +404,7 @@ Muito sucesso"</p>
 						<span class="faq-icon">+</span>
 					</button>
 					<div class="faq-answer">
-						<p>Varia conforme o caso, mas quanto antes começar, menos sessões serão necessárias. Geralmente entre 5 a 10 sessões.</p>
+						<p>O número de sessões varia conforme cada caso e os objetivos do tratamento. Geralmente vemos progressos significativos entre 8 a 15 sessões, mas cada bebê tem seu ritmo único.</p>
 					</div>
 				</div>
 				
@@ -403,7 +414,7 @@ Muito sucesso"</p>
 						<span class="faq-icon">+</span>
 					</button>
 					<div class="faq-answer">
-						<p>Não é obrigatório, mas trabalhamos em conjunto com pediatras para garantir o melhor cuidado para seu bebê.</p>
+						<p>Não é obrigatório, mas trabalhamos em conjunto com pediatras e outros profissionais para garantir um cuidado integrado e completo para seu bebê.</p>
 					</div>
 				</div>
 			</div>
@@ -450,7 +461,7 @@ Muito sucesso"</p>
 		</div>
 	</section>
 
-	<LeadForm client:load whatsappMessage="Olá! Gostaria de mais informações sobre Osteopatia Pediátrica." />
+	<LeadForm client:load whatsappMessage="Olá! Gostaria de mais informações sobre Fisioterapia Infantil." />
 
 	<!-- Floating WhatsApp Button -->
 	<button class="whatsapp-float-btn cta-btn" aria-label="Abrir formulário de contato">
