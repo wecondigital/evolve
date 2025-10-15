@@ -1,0 +1,1539 @@
+---
+import LeadForm from '../components/LeadForm.astro';
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Tratamento de Assimetria Craniana com Osteopatia - Evolve Saúde";
+const pageDescription = "Correção natural e segura da assimetria craniana em bebês com osteopatia pediátrica. Tratamento especializado sem capacete para plagiocefalia e braquicefalia.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+	<!-- Fixed Header -->
+	<header class="fixed-header">
+		<div class="header-container">
+			<div class="header-logo">
+				<img src="/images/logo-evolve.webp" alt="Evolve Saúde Integral" />
+			</div>
+			<button class="cta-btn cta-primary header-cta">Agende uma avaliação</button>
+		</div>
+	</header>
+
+	<!-- Hero Section -->
+	<section class="hero">
+		<div class="container">
+			<div class="hero-content">
+				<div class="hero-text">
+					<h1>Correção natural da assimetria craniana do seu bebê</h1>
+					<p class="hero-subtitle">A Osteopatia Pediátrica oferece tratamento especializado, natural e indolor para corrigir plagiocefalia, braquicefalia e outras assimetrias cranianas nos primeiros meses de vida.</p>
+					<button class="cta-btn cta-primary">Agende a avaliação do seu bebê</button>
+				</div>
+				<div class="hero-image">
+					<img src="/images/osteopatia-infantil.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bebê sorridente" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Problema / Identificação -->
+	<section class="problems">
+		<div class="container">
+			<h2>Você notou sinais de assimetria craniana no seu bebê?</h2>
+			<div class="problems-grid">
+				<div class="problem-card">
+					<div class="problem-image">
+						<img src="/images/problemas-alteracao-formato-cabeca-bebe.jpg" alt="Alteração no formato da cabeça" />
+					</div>
+					<div class="problem-content">
+						
+						<h3>Cabeça com formato achatado ou assimétrico</h3>
+					</div>
+				</div>
+				
+				<div class="problem-card">
+					<div class="problem-image">
+						<img src="/images/preferencia-mesmo-lado.jpg?auto=compress&cs=tinysrgb&w=400" alt="Bebê olhando para um lado" />
+					</div>
+					<div class="problem-content">
+						
+						<h3>Prefere olhar sempre para o mesmo lado</h3>
+					</div>
+				</div>
+				
+				<div class="problem-card">
+					<div class="problem-image">
+						<img src="/images/problemas-tensao-rigidez-pescoco.jpg" alt="Rigidez no pescoço" />
+					</div>
+					<div class="problem-content">
+						
+						<h3>Rigidez no pescoço ou ombros</h3>
+					</div>
+				</div>
+				
+			</div>
+			<div class="problems-cta">
+				<p class="problems-text">Esses sinais são <strong>característicos da assimetria craniana </strong> (plagiocefalia/braquicefalia) e <strong>torcicolo congênito</strong>. Quanto antes iniciar o tratamento com osteopatia, mais rápido e eficaz será a correção.</p>
+				<button class="cta-btn cta-secondary">Fale com nossa equipe agora</button>
+			</div>
+		</div>
+	</section>
+
+<!-- O que é assimetria craniana -->
+<section class="cranial-asymmetry">
+	<div class="container">
+		<div class="cranial-asymmetry-content">
+			<div class="cranial-asymmetry-text">
+				<h2>O que é assimetria craniana?</h2>
+				
+				<!-- Imagem movida para cima, logo após o título -->
+				<div class="cranial-asymmetry-image-top">
+					<img src="/images/assimetria-craniana.jpg" alt="Exemplo de assimetria craniana em bebê" />
+				</div>
+				
+				<p class="cranial-asymmetry-intro">A assimetria craniana é uma condição comum em bebês, onde a cabeça apresenta formato irregular ou achatado.</p>
+				
+				<p>Isso acontece quando o bebê passa muito tempo na mesma posição, seja no útero, durante o parto ou após o nascimento. A pressão constante em uma área específica da cabeça pode causar o achatamento.</p>
+				
+				<p><strong>É importante saber que:</strong></p>
+				<ul>
+					<li>É mais comum do que você imagina</li>
+					<li>Não afeta a inteligência do bebê</li>
+					<li>Quanto mais cedo for tratada, melhor o resultado</li>
+					<li>O tratamento é natural e indolor</li>
+				</ul>
+				
+				<p>A <strong>osteopatia pediátrica</strong> é uma das formas mais eficazes e suaves de corrigir essa condição, ajudando o crânio do bebê a retomar sua forma natural.</p>
+			</div>
+		</div>
+	</div>
+</section>
+				
+				
+
+	<!-- Benefícios -->
+	<section class="benefits">
+		<div class="container">
+			<h2>Os benefícios da osteopatia para assimetria craniana</h2>
+			<div class="benefits-grid">
+				<div class="benefit-card">
+					<div class="benefit-icon"></div>
+					<h3>Correção natural e sem dor</h3>
+					<p>Técnicas suaves que respeitam a delicadeza do bebê</p>
+				</div>
+				
+				<div class="benefit-card">
+					<div class="benefit-icon"></div>
+					<h3>Desenvolvimento motor saudável</h3>
+					<p>Promove o crescimento equilibrado e natural</p>
+				</div>
+				
+				<div class="benefit-card">
+					<div class="benefit-icon"></div>
+					<h3>Melhora no sono e no humor</h3>
+					<p>Bebê mais tranquilo e descansado</p>
+				</div>
+				
+				<div class="benefit-card">
+					<div class="benefit-icon"></div>
+					<h3>Prevenção de complicações futuras</h3>
+					<p>Evita problemas posturais e motores</p>
+				</div>
+				
+				<div class="benefit-card">
+					<div class="benefit-icon"></div>
+					<h3>Resultados visíveis já nas primeiras sessões</h3>
+					<p>Melhoras perceptíveis rapidamente</p>
+				</div>
+
+        <div class="benefit-card">
+					<div class="benefit-icon"></div>
+					<h3>Auxilia no alívio de tensões musculares</h3>
+					<p>Alívio de desconfortos para o seu bebê.</p>
+				</div>
+			</div>
+			<div class="benefits-cta">
+				<button class="cta-btn cta-primary">Quero agendar a avaliação</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Como é feito o atendimento -->
+	<section class="treatment-section">
+		<div class="container">
+			<div class="treatment-content">
+				<div class="treatment-text-content">
+					<h2>Como a Osteopatia trata a assimetria craniana</h2>
+					<p class="treatment-intro">O atendimento é realizado na melhor posição para o bebê, respeitando a sensibilidade de cada um.</p>
+					
+					<p>A osteopatia pediátrica utiliza técnicas manuais suaves e específicas para corrigir as assimetrias cranianas, liberando tensões e promovendo o crescimento equilibrado do crânio.</p>
+					
+					<p><strong>Quanto mais cedo começar o tratamento com o bebê, menos sessões serão necessárias.</strong></p>
+					
+								
+					<div class="symptoms-box">
+						<h3>Condições tratadas pela Osteopatia:</h3>
+						<ul>
+							<li>Plagiocefalia (achatamento lateral)</li>
+							<li>Braquicefalia (achatamento posterior)</li>
+							<li>Escafocefalia (alongamento do crânio)</li>
+							<li>Dificuldade para sentar ou engatinhar</li>
+							<li>Torcicolo congênito associado</li>
+							<li>Atrasos no desenvolvimento motor</li>
+							<li>Tensões musculares cervicais</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="treatment-images">
+					<div class="treatment-image-polaroid first-image">
+						<img src="/images/osteopatia-clinica-evolve.jpeg" alt="Dr. Gustavo realizando tratamento de osteopatia pediátrica" />
+					</div>
+					<div class="treatment-image-polaroid second-image">
+						<img src="/images/tratamento-osteopatia.jpeg" alt="Tratamento de osteopatia pediátrica na Evolve" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Diferenciais -->
+	<section class="differentials">
+		<div class="container">
+			<div class="differentials-content">
+				<div class="differentials-text">
+					<h2>Por que escolher a Evolve Saúde?</h2>
+					<ul class="differentials-list">
+						<li>
+							<div class="diff-check-icon">✓</div>
+							<span>Mais de 2.000 bebês atendidos com sucesso</span>
+						</li>
+						<li>
+							<div class="diff-check-icon">✓</div>
+							<span>Clínica especializada em osteopatia pediátrica</span>
+						</li>
+						<li>
+							<div class="diff-check-icon">✓</div>
+							<span>Ambiente acolhedor, preparado para recém-nascidos</span>
+						</li>
+						<li>
+							<div class="diff-check-icon">✓</div>
+							<span>Scanner 3D de última geração para avaliação precisa</span>
+						</li>
+						<li>
+							<div class="diff-check-icon">✓</div>
+							<span>Equipe multiprofissional dedicada ao bem-estar do bebê</span>
+						</li>
+					</ul>
+				</div>
+				<div class="differentials-image">
+					<img src="/images/equipe-evolve.jpg?auto=compress&cs=tinysrgb&w=600" alt="Equipe médica sorridente" />
+					<img src="/images/scanner-3d.jpeg" alt="Scanner 3D de última geração para avaliação precisa" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Depoimentos -->
+	<!-- Nossa Clínica -->
+	<section class="clinic-showcase">
+		<div class="container">
+			<h2>Conheça nossa clínica</h2>
+			<p class="clinic-description">Um ambiente acolhedor e especializado, pensado especialmente para o conforto dos bebês e tranquilidade dos pais</p>
+			<div class="clinic-gallery">
+				<div class="clinic-image">
+					<img src="/images/clinica-evolve-0.jpg" alt="Ambiente acolhedor da Clínica Evolve" />
+				</div>
+				<div class="clinic-image">
+					<img src="/images/clinica-evolve-1.jpg" alt="Sala de atendimento especializada" />
+				</div>
+				<div class="clinic-image">
+					<img src="/images/clinica-evolve-2.jpg" alt="Equipamentos modernos para osteopatia pediátrica" />
+				</div>
+			</div>
+			<div class="clinic-cta">
+				<button class="cta-btn cta-primary">Conheça nossa estrutura pessoalmente</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Depoimentos -->
+	<section class="testimonials">
+		<div class="container">
+			<h2>Histórias reais de transformação</h2>
+			<div class="testimonials-carousel">
+				<div class="testimonial-card active">
+					<div class="testimonial-content">
+						<div class="stars"></div>
+						<p>"Nossa bebê iniciou <strong>tratamento para assimetria craniana e facial com apenas 1 mês de vida </strong>. Fomos muito bem atendidos por todos os profissionais da clínica. A Dra. Carla, que nos acompanhou durante o tratamento, é extremamente competente e cuidadosa. Tratou nossa bebê com muito profissionalismo, zelo e carinho, isso fez toda diferença no processo. A Evolve  <strong>foi a melhor escolha que fizemos </strong>."</p>
+						<div class="testimonial-author">
+							<strong>Glaucia Maris</strong>
+							<span></span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="testimonial-card">
+					<div class="testimonial-content">
+						<div class="stars"></div>
+						<p>"Estávamos procurando osteopata para a <strong>assimetria craniana </strong>já com receio pois havíamos tido consulta com alguns profissionais que não nos agradaram muito, e finalmente encontramos o local certo, profissionais capacitados e cuidadosos, fizeram todo o tratamento com muito carinho e foram muito honestos quanto a necessidade de capacete (no nosso caso não precisou). Enfim,  <strong>recomendo, tivemos uma evolução maravilhosa em 3 meses </strong>."</p>
+						<div class="testimonial-author">
+							<strong>Tatiane Velalva</strong>
+							<span></span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="testimonial-card">
+					<div class="testimonial-content">
+						<div class="stars"></div>
+						<p>"Em uma consulta com o pediatra, foi alertado sobre a  <strong>plagiocefalia </strong>. Assim que saí da consulta, já comecei a procurar Osteopatia para o tratamento. Todos que eu via desde o início do tratamento já indicava capacete, e eu não queria isso pro meu filho. Foi quando achei a página da Evolve. Me chamou muita atenção as avaliações que já tinham. Dr. Gustavo fez nosso primeiro atendimento e sentimos muita confiança nas orientações e, o melhor, iria tentar o tratamento sem o capacete. Extremamente respeitosos e atenciosos, Dra. Marília é uma princesa com os pequenos tbm. E o  <strong>tratamento de 10 sessões teve muuuuito efeito positivo, além de ter ajudado no desenvolvimento motor e cognitivo do meu filho </strong>. Estamos muito felizes e satisfeitos. Indicamos e levaremos para toda a vida essa família linda que só boa deu alegria!"</p>
+						<div class="testimonial-author">
+							<strong>Beatriz Bertoldo</strong>
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="testimonials-cta">
+				<button class="cta-btn cta-primary">Agende a avaliação e viva essa transformação também</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Comparativo -->
+	<section class="comparison">
+		<div class="container">
+			<h2>Assimetria craniana: com ou sem tratamento osteopático?</h2>
+			<div class="comparison-grid">
+				<div class="comparison-card positive">
+					<h3>Com tratamento precoce</h3>
+					<ul>
+						<li>- <strong>Correção natural da assimetria:</strong> a osteopatia ajuda a alinhar a cabecinha e o corpinho do bebê de forma suave e sem desconforto.</li>
+						<li>- <strong>Bebê mais tranquilo, dormindo melhor:</strong> alívio de tensões que favorece o sono e reduz irritabilidade.</li>
+						<li>- <strong>Menor necessidade de intervenções futuras:</strong> quanto antes o cuidado acontece, menor a chance de tratamentos mais invasivos no futuro.</li>
+						<li>- <strong>Desenvolvimento motor saudável:</strong> favorece que o bebê atinja os marcos como rolar, engatinhar e andar no tempo certo.</li>
+						<li>- <strong>Prevenção de problemas posturais:</strong> contribui para que cresça com mais equilíbrio, postura adequada e qualidade de vida.</li>
+					</ul>
+				</div>
+				
+				<div class="comparison-card negative">
+					<h3>Sem tratamento</h3>
+					<ul>
+						<li>- <strong>Atrasos motores grossos:</strong> dificuldade para rolar, sentar, engatinhar ou andar.</li>
+            <li>- <strong>Atrasos motores finos:</strong> dificuldade em pegar objetos, trocar brinquedos de mão ou usar os dedinhos com precisão.</li>
+						<li>- <strong>Atrasos na linguagem:</strong> demora para balbuciar, emitir sons, falar ou usar gestos. </li>
+						<li>- <strong>Coordenação visual-motora:</strong> dificuldade em empilhar blocos, desenhar ou coordenar olhos e mãos.</li>
+						<li>- <strong>Habilidades sociais:</strong> menor contato visual, atraso no sorriso, dificuldade em responder a estímulos. </li>
+						<li>- <strong>Torcicolo:</strong> pode agravar assimetrias cranianas e atrasar o desenvolvimento motor.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ -->
+	<section class="faq">
+		<div class="container">
+			<h2>Perguntas Frequentes</h2>
+			<div class="faq-list">
+				<div class="faq-item">
+					<button class="faq-question">
+						A osteopatia pode substituir o uso de capacete para assimetria craniana?
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Em muitos casos, sim. A osteopatia pediátrica é uma alternativa natural e eficaz ao capacete, especialmente quando iniciada precocemente. Nossos especialistas avaliam cada caso individualmente para determinar a melhor abordagem.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question">
+						É doloroso para o bebê?
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Não, a osteopatia pediátrica é suave, segura e indolor. As técnicas são especialmente desenvolvidas para a delicadeza dos bebês.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question">
+						Qual a idade ideal para o tratamento?
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Até os 6 meses é o período mais eficaz, pois os ossos do crânio ainda estão em formação e respondem melhor ao tratamento.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question">
+						Quantas sessões são necessárias?
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Varia conforme o caso, mas quanto antes começar, menos sessões serão necessárias. Geralmente entre 5 a 10 sessões.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question">
+						Precisa de encaminhamento médico?
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Não é obrigatório, mas trabalhamos em conjunto com pediatras para garantir o melhor cuidado para seu bebê.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Final CTA -->
+	<section class="final-cta">
+		<div class="container">
+			<div class="final-cta-content">
+				<h2>Garanta o desenvolvimento saudável do seu bebê</h2>
+				<p>Agende agora uma avaliação com nossos especialistas e descubra como a osteopatia pode transformar a vida do seu filho.</p>
+				<button class="cta-btn cta-primary large">Agendar avaliação do meu bebê</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-info">
+					<h3>Evolve Saúde</h3>
+					<p>R. Azevedo Macedo, 20 – conj. 42<br>Vila Mariana – São Paulo<br>Tel: (11) 3285-2930</p>
+				</div>
+				<div class="footer-contact">
+					<button class="whatsapp-btn cta-btn">
+						<span class="whatsapp-icon">📱</span>
+						Fale conosco no WhatsApp
+					</button>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Thin Footer Section -->
+	<section class="thin-footer">
+		<div class="container">
+			<p class="thin-footer-text">
+				Copyright © {new Date().getFullYear()} - Todos os direitos reservados. CNPJ: 34.413.538/0001-40
+				<br>
+				Página desenvolvida por <a href="https://wecondigital.com.br/" target="_blank" rel="noopener noreferrer">Wecon</a>
+			</p>
+		</div>
+	</section>
+
+	<LeadForm client:load whatsappMessage="Olá! Gostaria de mais informações sobre Osteopatia Pediátrica para assimetria craniana." />
+
+	<!-- Floating WhatsApp Button -->
+	<button class="whatsapp-float-btn cta-btn" aria-label="Abrir formulário de contato">
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516z" fill="currentColor"/>
+		</svg>
+	</button>
+</Layout>
+
+<script>
+	// CTA Button functionality - wait for both DOM and component to be ready
+	function initializeCTAButtons() {
+		const ctaButtons = document.querySelectorAll('.cta-btn');
+		
+		if (ctaButtons.length > 0) {
+			ctaButtons.forEach(btn => {
+				btn.addEventListener('click', (e) => {
+					e.preventDefault();
+					
+					// Enviar evento para Google Tag Manager
+					if (typeof window !== 'undefined' && window.dataLayer) {
+						window.dataLayer.push({
+							'event': 'clique-botao-contato',
+							'button_text': btn.textContent?.trim() || 'CTA Button',
+							'button_location': window.location.pathname
+						});
+					}
+					
+					const modal = document.getElementById('lead-modal');
+					if (modal) {
+						modal.classList.remove('hidden');
+						document.body.style.overflow = 'hidden';
+					}
+				});
+			});
+		} else {
+			// Retry if buttons not found yet
+			setTimeout(initializeCTAButtons, 100);
+		}
+	}
+
+	// Start initialization when DOM is ready
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initializeCTAButtons);
+	} else {
+		initializeCTAButtons();
+	}
+</script>
+
+<style>
+	/* Global Styles */
+	body {
+		padding-top: 80px; /* Account for fixed header */
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+
+	section {
+		padding: 80px 0;
+	}
+
+	h1, h2, h3 {
+		font-weight: 600;
+		line-height: 1.2;
+	}
+
+	h1 {
+		font-size: 3rem;
+		color: #74B077;
+		margin-bottom: 24px;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		color: #333;
+		text-align: center;
+		margin-bottom: 48px;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		color: #333;
+		margin-bottom: 16px;
+	}
+
+	/* Fixed Header */
+	.fixed-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.95);
+		backdrop-filter: blur(10px);
+		border-bottom: 1px solid rgba(116, 176, 119, 0.1);
+		z-index: 1000;
+		padding: 12px 0;
+		transition: all 0.3s ease;
+	}
+
+	.header-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header-logo img {
+		height: 50px;
+		width: auto;
+	}
+
+	.header-cta {
+		padding: 12px 24px;
+		font-size: 16px;
+		white-space: nowrap;
+	}
+
+	/* CTA Buttons */
+	.cta-btn {
+		display: inline-block;
+		padding: 16px 32px;
+		border: none;
+		border-radius: 8px;
+		font-size: 18px;
+		font-weight: 600;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		text-align: center;
+	}
+
+	.cta-primary {
+		background: linear-gradient(135deg, #74B077 0%, #3C81A4 100%);
+		color: white;
+	}
+
+	.cta-secondary {
+		background: linear-gradient(135deg, #9F4C98 0%, #E1874A 100%);
+		color: white;
+	}
+
+	.cta-btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 10px 30px rgba(116, 176, 119, 0.3);
+	}
+
+	.cta-btn.large {
+		padding: 20px 40px;
+		font-size: 20px;
+	}
+
+	/* Hero Section */
+	.hero {
+		background: linear-gradient(135deg, #f8fffe 0%, #e8f5f3 100%);
+		padding: 80px 0;
+	}
+
+	.hero-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.hero-subtitle {
+		font-size: 1.25rem;
+		color: #666;
+		margin-bottom: 32px;
+		line-height: 1.6;
+	}
+
+	.hero-image img {
+		width: 90%;
+		border-radius: 16px;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+	}
+
+	/* Problems Section */
+	.problems {
+		background: white;
+	}
+
+	.problems-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 32px;
+		margin-bottom: 48px;
+	}
+
+	.problem-card {
+		background: #f9fafb;
+		border-radius: 16px;
+		padding: 24px;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		transition: transform 0.3s ease;
+	}
+
+	.problem-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	}
+
+	.problem-image {
+		flex-shrink: 0;
+		width: 120px;
+		height: 120px;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	.problem-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.problem-content {
+		flex: 1;
+	}
+
+	
+
+	.problem-content h3 {
+		font-size: 1.1rem;
+		margin: 0;
+		color: #333;
+	}
+
+	.problems-cta {
+		text-align: center;
+	}
+
+	.problems-text {
+		font-size: 1.1rem;
+		color: #666;
+		margin-bottom: 32px;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Cranial Asymmetry Section */
+	.cranial-asymmetry {
+		background: linear-gradient(135deg, #fff8f0 0%, #fef3e2 100%);
+		padding: 80px 0;
+	}
+
+	.cranial-asymmetry-content {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.cranial-asymmetry-text h2 {
+		color: #74B077;
+		text-align: center;
+		margin-bottom: 24px;
+		font-size: 2.2rem;
+	}
+
+	.cranial-asymmetry-intro {
+		font-size: 1.2rem;
+		color: #74B077;
+		font-weight: 600;
+		margin-bottom: 24px;
+		line-height: 1.5;
+	}
+
+	.cranial-asymmetry-text p {
+		color: #666;
+		line-height: 1.6;
+		margin-bottom: 20px;
+		font-size: 1.1rem;
+	}
+
+	.cranial-asymmetry-text p strong {
+		color: #3C81A4;
+		font-weight: 600;
+	}
+
+	.cranial-asymmetry-text ul {
+		list-style: none;
+		padding: 0;
+		margin: 20px 0;
+		background: white;
+		border-radius: 12px;
+		padding: 24px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+	}
+
+	.cranial-asymmetry-text li {
+		color: #666;
+		margin-bottom: 12px;
+		padding-left: 24px;
+		position: relative;
+		font-size: 1rem;
+	}
+
+	.cranial-asymmetry-text li::before {
+		content: "✓";
+		color: #74B077;
+		font-weight: bold;
+		position: absolute;
+		left: 0;
+		font-size: 1.2rem;
+	}
+
+	.cranial-asymmetry-text li:last-child {
+		margin-bottom: 0;
+	}
+
+	.cranial-asymmetry-image img {
+		max-width: 400px;
+		border-radius: 16px;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+	}
+
+	/* Benefits Section */
+	.benefits {
+		background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+	}
+
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 32px;
+		margin-bottom: 48px;
+	}
+
+	.benefit-card {
+		background: white;
+		padding: 32px 24px;
+		border-radius: 16px;
+		text-align: center;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+		transition: transform 0.3s ease;
+	}
+
+	.benefit-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.benefit-icon {
+		font-size: 3rem;
+		margin-bottom: 16px;
+	}
+
+	.benefit-card h3 {
+		color: #3C81A4;
+		margin-bottom: 12px;
+	}
+
+	.benefit-card p {
+		color: #666;
+		margin: 0;
+	}
+
+	.benefits-cta {
+		text-align: center;
+	}
+
+	/* Treatment Section */
+	.treatment-section {
+		background: linear-gradient(135deg, #fef7ff 0%, #f3e8ff 100%);
+		padding: 80px 0;
+	}
+
+	.treatment-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: start;
+    
+	}
+
+	.treatment-text-content h2 {
+		color: #74B077;
+		text-align: left;
+		margin-bottom: 24px;
+		font-size: 2.2rem;
+	}
+
+	.treatment-intro {
+		font-size: 1.2rem;
+		color: #74B077;
+		font-weight: 600;
+		margin-bottom: 24px;
+		line-height: 1.5;
+	}
+
+	.treatment-text-content p {
+		color: #666;
+		line-height: 1.6;
+		margin-bottom: 20px;
+		font-size: 1.1rem;
+
+	}
+
+	.treatment-text-content p strong {
+		color: #3C81A4;
+		font-weight: 600;
+	}
+
+	.symptoms-box {
+		background: white;
+		border-radius: 16px;
+		padding: 24px;
+		margin-top: 32px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		border-left: 4px solid #74B077;
+	}
+
+	.symptoms-box h3 {
+		color: #74B077;
+		font-size: 1.3rem;
+		margin-bottom: 16px;
+		text-align: left;
+	}
+
+	.symptoms-box ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.symptoms-box li {
+		color: #666;
+		margin-bottom: 8px;
+		padding-left: 24px;
+		position: relative;
+		font-size: 1rem;
+	}
+
+	.symptoms-box li::before {
+		content: "•";
+		color: #74B077;
+		font-weight: bold;
+		position: absolute;
+		left: 0;
+		font-size: 1.2rem;
+	}
+
+	.treatment-images {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 90px;
+		
+	}
+
+	.treatment-image-polaroid {
+		background: white;
+		padding: 12px 12px 40px 12px;
+		border-radius: 8px;
+		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+		max-width: 380px;
+		transition: transform 0.3s ease;
+	}
+
+	.treatment-image-polaroid:hover {
+		transform: scale(1.05);
+	}
+
+	.treatment-image-polaroid.first-image {
+		transform: rotate(-3deg);
+		z-index: 2;
+	}
+
+	.treatment-image-polaroid.second-image {
+		transform: rotate(2deg) translateX(-20px);
+		z-index: 1;
+	}
+
+	.treatment-image-polaroid img {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		border-radius: 4px;
+	}
+
+	/* Differentials Section */
+	.differentials {
+		background: white;
+	}
+
+	.differentials-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.differentials-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.differentials-list li {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 24px;
+		font-size: 1.1rem;
+	}
+
+	.diff-icon {
+		font-size: 1.5rem;
+		width: 40px;
+		text-align: center;
+	}
+
+	.diff-check-icon {
+		background: #74B077;
+		color: white;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: bold;
+		flex-shrink: 0;
+	}
+
+	.differentials-image img {
+		width: 100%;
+		border-radius: 16px;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+	}
+
+	.differentials-image {
+		display: flex;
+		gap: 20px;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.differentials-image img {
+		flex: 1;
+		min-width: 280px;
+		max-width: 300px;
+		width: auto;
+		border-radius: 16px;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+	}
+
+	/* Testimonials Section */
+	.testimonials {
+		background: linear-gradient(135deg, #fef7ff 0%, #f3e8ff 100%);
+	}
+
+	.testimonials-carousel {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 32px;
+		margin-bottom: 48px;
+	}
+
+	.testimonial-card {
+		background: white;
+		padding: 32px;
+		border-radius: 16px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+	}
+
+	.stars {
+		color: #fbbf24;
+		font-size: 1.2rem;
+		margin-bottom: 16px;
+	}
+
+	.testimonial-content p {
+		font-style: italic;
+		color: #666;
+		margin-bottom: 20px;
+		line-height: 1.6;
+	}
+
+	.testimonial-author strong {
+		color: #9F4C98;
+		display: block;
+	}
+
+	.testimonial-author span {
+		color: #999;
+		font-size: 0.9rem;
+	}
+
+	.testimonials-cta {
+		text-align: center;
+	}
+
+	/* Comparison Section */
+	.comparison {
+		background: white;
+	}
+
+	.comparison-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.comparison-card {
+		padding: 32px;
+		border-radius: 16px;
+		text-align: center;
+	}
+
+	.comparison-card.positive {
+		background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+		border: 2px solid #74B077;
+	}
+
+	.comparison-card.negative {
+		background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+		border: 2px solid #ef4444;
+	}
+
+	.comparison-card h3 {
+		margin-bottom: 24px;
+	}
+
+	.comparison-card.positive h3 {
+		color: #74B077;
+	}
+
+	.comparison-card.negative h3 {
+		color: #ef4444;
+	}
+
+	.comparison-card ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+	}
+
+	.comparison-card li {
+		margin-bottom: 12px;
+		font-size: 1.1rem;
+	}
+
+	/* FAQ Section */
+	.faq {
+		background: #f9fafb;
+	}
+
+	.faq-list {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.faq-item {
+		background: white;
+		border-radius: 12px;
+		margin-bottom: 16px;
+		overflow: hidden;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+	}
+
+	.faq-question {
+		width: 100%;
+		padding: 24px;
+		background: none;
+		border: none;
+		text-align: left;
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: #333;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.faq-question:hover {
+		background: #f9fafb;
+	}
+
+	.faq-icon {
+		font-size: 1.5rem;
+		color: #74B077;
+		transition: transform 0.3s ease;
+	}
+
+	.faq-item.active .faq-icon {
+		transform: rotate(45deg);
+	}
+
+	.faq-answer {
+		padding: 0 24px;
+		max-height: 0;
+		overflow: hidden;
+		transition: all 0.3s ease;
+	}
+
+	.faq-item.active .faq-answer {
+		padding: 0 24px 24px;
+		max-height: 200px;
+	}
+
+	.faq-answer p {
+		color: #666;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	/* Final CTA Section */
+	.final-cta {
+		background: linear-gradient(135deg, #74B077 0%, #3C81A4 100%);
+		color: white;
+	}
+
+	.final-cta-content {
+		text-align: center;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.final-cta h2 {
+		color: white;
+		margin-bottom: 24px;
+	}
+
+	.final-cta p {
+		font-size: 1.2rem;
+		margin-bottom: 32px;
+		opacity: 0.9;
+	}
+
+	.final-cta .cta-btn {
+		background: white;
+		color: #74B077;
+	}
+
+	.final-cta .cta-btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+	}
+
+	/* Footer */
+	.footer {
+		background: #1f2937;
+		color: white;
+		padding: 40px 0;
+	}
+
+	.footer-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.footer-info h3 {
+		color: #74B077;
+		margin-bottom: 12px;
+	}
+
+	.footer-info p {
+		color: #d1d5db;
+		margin: 0;
+	}
+
+	.whatsapp-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		background: #25d366;
+		color: white;
+		padding: 12px 24px;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.3s ease;
+	}
+
+	.whatsapp-btn:hover {
+		background: #128c7e;
+		transform: translateY(-2px);
+	}
+
+	.whatsapp-icon {
+		font-size: 1.2rem;
+	}
+
+	/* Thin Footer Section */
+	.thin-footer {
+		background: #111827;
+		padding: 10px 0;
+		border-top: 1px solid #374151;
+	}
+
+	.thin-footer-text {
+		text-align: center;
+		font-size: 0.75rem;
+		color: #9ca3af;
+		margin: 0;
+		line-height: 1.4;
+	}
+
+	.thin-footer-text a {
+		color: #74B077;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.thin-footer-text a:hover {
+		color: #86efac;
+		text-decoration: underline;
+	}
+
+	/* Responsive Design */
+	/* Clinic Showcase Section */
+	/* Floating WhatsApp Button */
+	.whatsapp-float-btn {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		width: 70px;
+		height: 70px;
+		background: #25d366;
+		color: white;
+		border: none;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+		cursor: pointer;
+		z-index: 1000;
+		transition: all 0.3s ease;
+		padding: 0;
+	}
+
+	.whatsapp-float-btn:hover {
+		background: #128c7e;
+		transform: translateY(-3px);
+		box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+	}
+
+	.whatsapp-float-btn svg {
+		width: 50px;
+		height: 50px;
+	}
+
+	.clinic-showcase {
+		background: linear-gradient(135deg, #f8fffe 0%, #e8f5f3 100%);
+	}
+
+	.clinic-description {
+		text-align: center;
+		font-size: 1.2rem;
+		color: #666;
+		max-width: 600px;
+		margin: 0 auto 48px;
+		line-height: 1.6;
+	}
+
+	.clinic-gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 32px;
+		margin-bottom: 48px;
+	}
+
+	.clinic-image {
+		position: relative;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease;
+	}
+
+	.clinic-image:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+	}
+
+	.clinic-image img {
+		width: 100%;
+		height: 280px;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.clinic-image:hover img {
+		transform: scale(1.05);
+	}
+
+	.clinic-cta {
+		text-align: center;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.container {
+			padding: 0 16px;
+		}
+
+		section {
+			padding: 60px 0;
+		}
+
+		h1 {
+			font-size: 2.2rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		.hero-content,
+		.differentials-content {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.hero-image {
+			
+		}
+
+		.problems-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.problem-card {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.benefits-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.comparison-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.testimonials-carousel {
+			flex-direction: column;
+		}
+
+		.testimonial-card {
+			min-width: auto;
+		}
+
+		.footer-content {
+			flex-direction: column;
+			gap: 24px;
+			text-align: center;
+		}
+
+		.cta-btn {
+			padding: 14px 24px;
+			font-size: 16px;
+		}
+
+		.cta-btn.large {
+			padding: 16px 32px;
+			font-size: 18px;
+		}
+
+		.fixed-header {
+			padding: 8px 0;
+		}
+
+		.header-container {
+			padding: 0 16px;
+		}
+
+		.header-logo img {
+			height: 40px;
+		}
+
+		.header-cta {
+			padding: 10px 16px;
+			font-size: 14px;
+		}
+
+		body {
+			padding-top: 70px;
+		}
+
+		.clinic-gallery {
+			grid-template-columns: 1fr;
+		}
+
+		.clinic-image img {
+			height: 240px;
+		}
+
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.cranial-asymmetry-text h2 {
+			font-size: 1.8rem;
+			text-align: center;
+    
+		}
+
+		.cranial-asymmetry-text {
+			text-align: center;
+			
+		}
+
+		
+			
+		}
+
+
+
+		.treatment-content {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.treatment-text-content h2 {
+			font-size: 1.8rem;
+			text-align: center;
+		}
+
+		.treatment-images {
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.treatment-image-polaroid {
+			max-width: 400px;
+		}
+
+		.treatment-image-polaroid.first-image {
+			transform: rotate(-2deg);
+		}
+
+		.treatment-image-polaroid.second-image {
+			transform: rotate(2deg) translateX(0);
+		}
+
+		.treatment-image-polaroid img {
+			height: 200px;
+		}
+    /* CSS adicional para a imagem reposicionada */
+.cranial-asymmetry-image-top {
+	text-align: center;
+	margin: 32px 0 40px 0;
+}
+
+
+
+/* Remover ou comentar o CSS da imagem antiga */
+/*
+.cranial-asymmetry-image img {
+	max-width: 400px;
+	border-radius: 16px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+*/
+
+/* Responsive para dispositivos móveis */
+@media (max-width: 768px) {
+	.cranial-asymmetry-image-top img {
+		max-width: 100%;
+	}
+}
+	}
+</style>
+
+<script>
+	// FAQ Functionality
+	document.addEventListener('DOMContentLoaded', () => {
+		const faqItems = document.querySelectorAll('.faq-item');
+		
+		faqItems.forEach(item => {
+			const question = item.querySelector('.faq-question');
+			
+			question?.addEventListener('click', () => {
+				const isActive = item.classList.contains('active');
+				
+				// Close all other items
+				faqItems.forEach(otherItem => {
+					otherItem.classList.remove('active');
+				});
+				
+				// Toggle current item
+				if (!isActive) {
+					item.classList.add('active');
+				}
+			});
+		});
+	});
+</script>
