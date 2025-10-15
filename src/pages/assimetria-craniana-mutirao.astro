@@ -7,6 +7,10 @@ const pageDescription = "Correção natural e segura da assimetria craniana em b
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
+<div class="fixed-promo-banner">
+    Mutirão Mês das Crianças: agende uma avaliação com condições super especiais até 31/10.
+</div>
+
 	<!-- Fixed Header -->
 	<header class="fixed-header">
 		<div class="header-container">
@@ -1491,6 +1495,39 @@ const pageDescription = "Correção natural e segura da assimetria craniana em b
 .cranial-asymmetry-image-top {
 	text-align: center;
 	margin: 32px 0 40px 0;
+}
+
+
+
+
+
+
+
+
+
+.fixed-promo-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #E27D60; /* Laranja suave para destaque */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    z-index: 1001; /* Garante que fique acima de outros elementos fixos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+/* Ajuste o padding-top do body para acomodar a nova faixa fixa e o header existente */
+body {
+    padding-top: 120px; /* 80px (header) + ~40px (banner) */
 }
 
 
