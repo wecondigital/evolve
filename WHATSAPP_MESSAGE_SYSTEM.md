@@ -68,20 +68,27 @@ Para testar as diferentes origens, adicione os parâmetros apropriados:
 **Google Ads:**
 ```
 https://seusite.com/assimetria-craniana?gclid=123456
+https://seusite.com/assimetria-craniana/?gclid=123456
 https://seusite.com/torcicolo-congenito?gbraid=abcdef
+https://seusite.com/torcicolo-congenito/?gbraid=abcdef
 ```
 
 **Meta Ads:**
 ```
 https://seusite.com/osteopatia-colicas?fbclid=789xyz
+https://seusite.com/osteopatia-colicas/?fbclid=789xyz
 https://seusite.com/fisioterapia-infantil?fbclid=456abc
 ```
 
 **Tráfego Orgânico:**
 ```
 https://seusite.com/assimetria-craniana
+https://seusite.com/assimetria-craniana/
 https://seusite.com/osteopatia-disquesia
+https://seusite.com/osteopatia-disquesia/
 ```
+
+**Nota:** O sistema suporta URLs com e sem barra final (`/`). Ambos os formatos funcionarão corretamente.
 
 ## Arquivos Implementados
 
@@ -90,6 +97,7 @@ Módulo utilitário que contém toda a lógica de:
 - Detecção de origem do tráfego
 - Mapeamento de páginas para tópicos
 - Geração de mensagens personalizadas
+- Normalização de paths (remove barras finais automaticamente)
 
 ### `/src/components/LeadForm.astro`
 Componente de formulário atualizado para:
@@ -114,3 +122,26 @@ const PAGE_TOPICS: Record<string, string> = {
   '/nova-pagina': 'descrição do novo serviço',
 };
 ```
+
+## Troubleshooting
+
+### Mensagem genérica ao invés da específica
+
+Se você está vendo a mensagem genérica "Osteopatia Pediátrica" ao invés da mensagem específica da página:
+
+1. **Verifique o path da página**: Confirme que o path no `PAGE_TOPICS` corresponde exatamente ao path da página Astro
+2. **Barras finais**: O sistema agora normaliza automaticamente paths com e sem barras finais (`/`)
+3. **Console do navegador**: Abra as ferramentas de desenvolvedor e verifique se há erros no console
+4. **Teste o path**: Execute `console.log(window.location.pathname)` no console para ver exatamente qual path está sendo usado
+
+### Origem do tráfego não detectada
+
+Se a mensagem não menciona "Google" ou "Meta" quando deveria:
+
+1. **Verifique os parâmetros da URL**: Confirme que `gclid`, `gbraid` ou `fbclid` estão presentes na URL
+2. **Cache do navegador**: Limpe o cache e recarregue a página
+3. **Teste a detecção**: Execute no console:
+   ```javascript
+   import { detectTrafficSource } from '/src/lib/whatsappMessageBuilder.ts';
+   console.log(detectTrafficSource());
+   ```

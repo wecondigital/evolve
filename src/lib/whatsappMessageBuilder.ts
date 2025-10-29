@@ -51,10 +51,18 @@ export function detectTrafficSource(url: string = window.location.href): Traffic
 }
 
 /**
+ * Normalizes a pathname by removing trailing slashes
+ */
+function normalizePath(pathname: string): string {
+  return pathname.replace(/\/$/, '') || '/';
+}
+
+/**
  * Gets the topic for the current page
  */
 export function getPageTopic(pathname: string = window.location.pathname): string {
-  return PAGE_TOPICS[pathname] || 'Osteopatia Pediátrica';
+  const normalizedPath = normalizePath(pathname);
+  return PAGE_TOPICS[normalizedPath] || 'Osteopatia Pediátrica';
 }
 
 /**
