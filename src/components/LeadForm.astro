@@ -256,6 +256,7 @@ const {
 
 <script>
   import { createClient } from '@supabase/supabase-js';
+  import { detectTrafficSource, getPageTopic, buildWhatsAppMessage } from '../lib/whatsappMessageBuilder';
 
   // Initialize Supabase client
   const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
@@ -453,10 +454,12 @@ const {
           });
         }
         
-        // Redirect to WhatsApp
-        const modal = document.getElementById('lead-modal');
-        const customMessage = modal?.getAttribute('data-whatsapp-message') || 'Olá! Gostaria de mais informações sobre Osteopatia Infantil.';
-        const encodedMessage = encodeURIComponent(customMessage);
+        // Build dynamic WhatsApp message based on traffic source and page
+        const trafficSource = detectTrafficSource();
+        const pageTopic = getPageTopic();
+        const whatsappMessage = buildWhatsAppMessage(trafficSource, pageTopic);
+
+        const encodedMessage = encodeURIComponent(whatsappMessage);
         window.location.href = `https://api.whatsapp.com/send?phone=5511959774208&text=${encodedMessage}`;
         
       } catch (error) {
