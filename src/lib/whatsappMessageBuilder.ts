@@ -15,12 +15,12 @@ export interface PageConfig {
 }
 
 const PAGE_TOPICS: Record<string, string> = {
-  '/assimetria-craniana': 'assimetria craniana',
+  '/assimetria-craniana': 'tratamento de assimetria craniana',
   '/assimetria-craniana-mutirao': 'agendamento para assimetria craniana do Mutirão Mês das Crianças',
-  '/torcicolo-congenito': 'torcicolo congênito',
+  '/torcicolo-congenito': 'tratamento de torcicolo congênito',
   '/fisioterapia-infantil': 'Fisioterapia Infantil',
-  '/osteopatia-disquesia': 'disquesia em bebês',
-  '/osteopatia-colicas': 'cólicas em bebês',
+  '/osteopatia-disquesia': 'tratamento de disquesia em bebês',
+  '/osteopatia-colicas': 'tratamento de cólicas em bebês',
 };
 
 /**
@@ -68,15 +68,15 @@ export function buildWhatsAppMessage(
   const topic = pageTopic || getPageTopic();
 
   if (source.isGoogleAds) {
-    return `Olá! Vim do Google e gostaria de mais informações sobre Osteopatia Pediátrica para ${topic}.`;
+    return `Olá! Vim do Google e gostaria de mais informações sobre ${topic}.`;
   }
 
   if (source.isMetaAds) {
-    return `Olá! Vim do Meta (Facebook/Instagram) e gostaria de mais informações sobre Osteopatia Pediátrica para ${topic}.`;
+    return `Olá! Vim do Meta (Facebook/Instagram) e gostaria de mais informações sobre ${topic}.`;
   }
 
   // Fallback for organic traffic
-  return `Olá! Gostaria de mais informações sobre Osteopatia Pediátrica para ${topic}.`;
+  return `Olá! Gostaria de mais informações sobre ${topic}.`;
 }
 
 /**
