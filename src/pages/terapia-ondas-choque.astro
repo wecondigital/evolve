@@ -1,0 +1,1139 @@
+---
+import LeadForm from '../components/LeadForm.astro';
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Terapia por Ondas de Choque - Evolve Saúde Integral";
+const pageDescription = "Tratamento eficaz para dores musculares, tendinites, fascite plantar e lesões crônicas. Alívio rápido e duradouro com tecnologia avançada.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+	<!-- Fixed Header -->
+	<header class="fixed-header">
+		<div class="header-container">
+			<div class="header-logo">
+				<img src="/images/logo-evolve.webp" alt="Evolve Saúde Integral" />
+			</div>
+			<button class="cta-btn cta-primary header-cta">Agende uma avaliação</button>
+		</div>
+	</header>
+
+	<!-- Hero Section -->
+	<section class="hero">
+		<div class="container">
+			<div class="hero-content">
+				<div class="hero-text">
+					<h1>Recupere seus movimentos e alivie suas dores com tecnologia avançada</h1>
+					<p class="hero-subtitle">A Terapia por Ondas de Choque estimula a regeneração natural dos tecidos, reduz inflamações e promove alívio rápido e duradouro em casos de dor muscular, tendinites, fascite plantar e muito mais.</p>
+					<button class="cta-btn cta-primary large">Agendar minha avaliação</button>
+				</div>
+				<div class="hero-image">
+					<img src="/images/tratamento-osteopatia-evolve.jpg" alt="Tratamento com Ondas de Choque" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Problema / Identificação -->
+	<section class="problems">
+		<div class="container">
+			<h2>Você convive com dores que limitam sua rotina?</h2>
+			<div class="problems-grid">
+				<div class="problem-card">
+					<div class="problem-icon">
+						<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="32" cy="32" r="30" fill="#E27D60" opacity="0.2"/>
+							<path d="M32 16v32M16 32h32" stroke="#E27D60" stroke-width="3" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<h3>Tendinite no ombro, cotovelo ou punho</h3>
+					<p>Inflamação dos tendões que causa dor e limita movimentos</p>
+				</div>
+
+				<div class="problem-card">
+					<div class="problem-icon">
+						<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="32" cy="32" r="30" fill="#E27D60" opacity="0.2"/>
+							<path d="M32 16v32M16 32h32" stroke="#E27D60" stroke-width="3" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<h3>Fascite plantar ou dor no calcanhar</h3>
+					<p>Dor intensa na sola do pé que dificulta caminhar</p>
+				</div>
+
+				<div class="problem-card">
+					<div class="problem-icon">
+						<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="32" cy="32" r="30" fill="#E27D60" opacity="0.2"/>
+							<path d="M32 16v32M16 32h32" stroke="#E27D60" stroke-width="3" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<h3>Epicondilite (cotovelo de tenista ou golfista)</h3>
+					<p>Dor lateral ou medial do cotovelo que piora com movimento</p>
+				</div>
+
+				<div class="problem-card">
+					<div class="problem-icon">
+						<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="32" cy="32" r="30" fill="#E27D60" opacity="0.2"/>
+							<path d="M32 16v32M16 32h32" stroke="#E27D60" stroke-width="3" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<h3>Dor muscular crônica ou fibromialgia</h3>
+					<p>Dores persistentes em músculos e tecidos moles</p>
+				</div>
+
+				<div class="problem-card">
+					<div class="problem-icon">
+						<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="32" cy="32" r="30" fill="#E27D60" opacity="0.2"/>
+							<path d="M32 16v32M16 32h32" stroke="#E27D60" stroke-width="3" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<h3>Lesões esportivas que não cicatrizam</h3>
+					<p>Traumas e microlesões que impedem a prática esportiva</p>
+				</div>
+
+				<div class="problem-card">
+					<div class="problem-icon">
+						<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="32" cy="32" r="30" fill="#E27D60" opacity="0.2"/>
+							<path d="M32 16v32M16 32h32" stroke="#E27D60" stroke-width="3" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<h3>Bursites ou inflamações nos tendões</h3>
+					<p>Inflamação das bursas que causa dor e inchaço</p>
+				</div>
+			</div>
+			<div class="problems-cta">
+				<p class="problems-text">Essas dores podem indicar inflamações e microlesões que não se regeneraram corretamente. A Terapia por Ondas de Choque acelera o processo natural de cura, tratando a causa da dor — e não apenas os sintomas.</p>
+				<button class="cta-btn cta-secondary large">Quero aliviar minhas dores</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Benefícios -->
+	<section class="benefits">
+		<div class="container">
+			<h2>Recupere seu bem-estar e volte a se movimentar sem dor</h2>
+			<div class="benefits-grid">
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="40" cy="40" r="38" fill="#2C6E63" opacity="0.1"/>
+							<path d="M25 40l10 10 20-20" stroke="#2C6E63" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<h3>Alívio rápido e eficaz da dor</h3>
+					<p>Redução significativa da dor logo nas primeiras sessões</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="40" cy="40" r="38" fill="#2C6E63" opacity="0.1"/>
+							<path d="M40 20v40M20 40h40" stroke="#2C6E63" stroke-width="4" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<h3>Regeneração dos tecidos lesionados</h3>
+					<p>Estimula o corpo a reparar naturalmente tendões e músculos</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="40" cy="40" r="38" fill="#2C6E63" opacity="0.1"/>
+							<circle cx="40" cy="40" r="15" stroke="#2C6E63" stroke-width="4"/>
+						</svg>
+					</div>
+					<h3>Melhora da circulação e oxigenação local</h3>
+					<p>Aumenta o fluxo sanguíneo para acelerar a recuperação</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="40" cy="40" r="38" fill="#2C6E63" opacity="0.1"/>
+							<path d="M40 20v40" stroke="#2C6E63" stroke-width="4" stroke-linecap="round"/>
+						</svg>
+					</div>
+					<h3>Redução da inflamação e da tensão muscular</h3>
+					<p>Diminui processos inflamatórios e relaxa músculos tensos</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="40" cy="40" r="38" fill="#2C6E63" opacity="0.1"/>
+							<path d="M30 50l10-10 10 10" stroke="#2C6E63" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<h3>Recuperação mais rápida de lesões esportivas</h3>
+					<p>Retorno acelerado às atividades físicas com segurança</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="40" cy="40" r="38" fill="#2C6E63" opacity="0.1"/>
+							<rect x="25" y="25" width="30" height="30" rx="4" stroke="#2C6E63" stroke-width="4"/>
+						</svg>
+					</div>
+					<h3>Tratamento não invasivo e sem medicamentos</h3>
+					<p>Terapia segura sem necessidade de cirurgia ou remédios</p>
+				</div>
+			</div>
+			<div class="benefits-cta">
+				<button class="cta-btn cta-primary large">Agendar minha primeira sessão</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Diferenciais -->
+	<section class="differentials">
+		<div class="container">
+			<div class="differentials-content">
+				<div class="differentials-text">
+					<h2>Por que escolher a Evolve Saúde Integral?</h2>
+					<ul class="differentials-list">
+						<li>
+							<div class="diff-check-icon">✓</div>
+							<span>Profissionais certificados em Terapia por Ondas de Choque</span>
+						</li>
+						<li>
+							<div class="diff-check-icon">✓</div>
+							<span>Equipamentos de última geração</span>
+						</li>
+						<li>
+							<div class="diff-check-icon">✓</div>
+							<span>Avaliação individualizada e protocolos personalizados</span>
+						</li>
+						<li>
+							<div class="diff-check-icon">✓</div>
+							<span>Mais de 2.000 pacientes tratados com sucesso</span>
+						</li>
+						<li>
+							<div class="diff-check-icon">✓</div>
+							<span>Estrutura moderna e ambiente acolhedor</span>
+						</li>
+						<li>
+							<div class="diff-check-icon">✓</div>
+							<span>Integração com outras terapias de reabilitação (fisioterapia, quiropraxia, RPG)</span>
+						</li>
+					</ul>
+				</div>
+				<div class="differentials-image">
+					<img src="/images/equipe-evolve.jpg" alt="Equipe profissional Evolve" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Depoimentos -->
+	<section class="testimonials">
+		<div class="container">
+			<h2>Quem tratou com Ondas de Choque conta como voltou a viver sem dor</h2>
+			<div class="testimonials-carousel">
+				<div class="testimonial-card">
+					<div class="testimonial-content">
+						<div class="stars">⭐⭐⭐⭐⭐</div>
+						<p>"Sofria com fascite plantar há mais de um ano. Depois de 6 sessões de Ondas de Choque, consegui voltar a correr sem dor. Incrível!"</p>
+						<div class="testimonial-author">
+							<strong>Carlos Mendes</strong>
+							<span>Corredor amador, 42 anos</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="testimonial-card">
+					<div class="testimonial-content">
+						<div class="stars">⭐⭐⭐⭐⭐</div>
+						<p>"A tendinite no ombro me impedia de trabalhar. Com o tratamento, recuperei totalmente meus movimentos e não sinto mais dor."</p>
+						<div class="testimonial-author">
+							<strong>Mariana Silva</strong>
+							<span>Designer gráfica, 35 anos</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="testimonial-card">
+					<div class="testimonial-content">
+						<div class="stars">⭐⭐⭐⭐⭐</div>
+						<p>"Depois de anos convivendo com dores crônicas no joelho, finalmente encontrei um tratamento que funciona. Estou muito satisfeito!"</p>
+						<div class="testimonial-author">
+							<strong>Roberto Andrade</strong>
+							<span>Empresário, 58 anos</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="testimonials-cta">
+				<button class="cta-btn cta-secondary large">Agende sua avaliação e sinta essa diferença também</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Comparativo -->
+	<section class="comparison">
+		<div class="container">
+			<h2>Com ou sem tratamento: o que muda na sua vida?</h2>
+			<div class="comparison-grid">
+				<div class="comparison-card positive">
+					<h3>✓ Com Terapia por Ondas de Choque</h3>
+					<ul>
+						<li><strong>Alívio rápido e progressivo da dor</strong> – Redução significativa já nas primeiras sessões</li>
+						<li><strong>Regeneração do tecido lesionado</strong> – Estimula a cura natural e definitiva</li>
+						<li><strong>Redução da inflamação</strong> – Processo inflamatório controlado naturalmente</li>
+						<li><strong>Retorno à atividade física com segurança</strong> – Volta às suas atividades favoritas</li>
+						<li><strong>Prevenção de novas lesões</strong> – Fortalecimento dos tecidos tratados</li>
+					</ul>
+				</div>
+
+				<div class="comparison-card negative">
+					<h3>✗ Sem Tratamento</h3>
+					<ul>
+						<li><strong>Dor recorrente e perda de movimento</strong> – Limitações que pioram com o tempo</li>
+						<li><strong>Uso constante de analgésicos</strong> – Dependência de medicamentos apenas para alívio temporário</li>
+						<li><strong>Agravamento das inflamações</strong> – Condição pode evoluir para casos crônicos</li>
+						<li><strong>Limitações na rotina e no lazer</strong> – Impossibilidade de realizar atividades simples</li>
+						<li><strong>Risco de necessitar cirurgia</strong> – Casos graves podem exigir procedimentos invasivos</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ -->
+	<section class="faq">
+		<div class="container">
+			<h2>Perguntas Frequentes</h2>
+			<div class="faq-list">
+				<div class="faq-item">
+					<button class="faq-question">
+						É doloroso?
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>A aplicação pode causar leve desconforto, mas é totalmente suportável e segura. A maioria dos pacientes relata apenas uma sensação de pressão durante o procedimento.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<button class="faq-question">
+						Quantas sessões são necessárias?
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Depende do caso, mas muitos pacientes sentem melhora logo nas primeiras aplicações. O protocolo típico varia de 3 a 6 sessões, realizadas semanalmente.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<button class="faq-question">
+						A Terapia por Ondas de Choque é segura?
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Sim. É um tratamento não invasivo, aprovado por órgãos de saúde e realizado por profissionais qualificados. Tem comprovação científica e é utilizado mundialmente.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<button class="faq-question">
+						Quais dores podem ser tratadas?
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Tendinites, fascite plantar, bursites, epicondilites, dores musculares, calcificações, síndrome do impacto do ombro, entre outras condições musculoesqueléticas.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Final CTA -->
+	<section class="final-cta">
+		<div class="container">
+			<div class="final-cta-content">
+				<h2>Diga adeus à dor e retome sua qualidade de vida</h2>
+				<p>Agende agora uma avaliação e descubra como a Terapia por Ondas de Choque pode transformar sua recuperação e bem-estar.</p>
+				<button class="cta-btn cta-white extra-large">Agendar minha avaliação</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-info">
+					<h3>Evolve Saúde Integral</h3>
+					<p>R. Azevedo Macedo, 20 – conj. 42<br>Vila Mariana – São Paulo<br>Tel: (11) 3285-2930</p>
+				</div>
+				<div class="footer-contact">
+					<button class="whatsapp-btn cta-btn">
+						<span class="whatsapp-icon">📱</span>
+						Fale conosco no WhatsApp
+					</button>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Thin Footer Section -->
+	<section class="thin-footer">
+		<div class="container">
+			<p class="thin-footer-text">
+				Copyright © {new Date().getFullYear()} - Todos os direitos reservados. CNPJ: 34.413.538/0001-40
+				<br>
+				Página desenvolvida por <a href="https://wecondigital.com.br/" target="_blank" rel="noopener noreferrer">Wecon</a>
+			</p>
+		</div>
+	</section>
+
+	<LeadForm whatsappMessage="Olá! Vim da página de Terapia por Ondas de Choque e gostaria de mais informações sobre o tratamento." />
+
+	<!-- Floating WhatsApp Button -->
+	<button class="whatsapp-float-btn cta-btn" aria-label="Abrir formulário de contato">
+		<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516z" fill="currentColor"/>
+		</svg>
+	</button>
+</Layout>
+
+<script>
+	// CTA Button functionality
+	function initializeCTAButtons() {
+		const ctaButtons = document.querySelectorAll('.cta-btn');
+
+		if (ctaButtons.length > 0) {
+			ctaButtons.forEach(btn => {
+				btn.addEventListener('click', (e) => {
+					e.preventDefault();
+
+					// Send event to Google Tag Manager
+					if (typeof window !== 'undefined' && window.dataLayer) {
+						window.dataLayer.push({
+							'event': 'clique-botao-contato',
+							'button_text': btn.textContent?.trim() || 'CTA Button',
+							'button_location': window.location.pathname
+						});
+					}
+
+					const modal = document.getElementById('lead-modal');
+					if (modal) {
+						modal.classList.remove('hidden');
+						document.body.style.overflow = 'hidden';
+					}
+				});
+			});
+		} else {
+			setTimeout(initializeCTAButtons, 100);
+		}
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initializeCTAButtons);
+	} else {
+		initializeCTAButtons();
+	}
+</script>
+
+<script>
+	// FAQ Functionality
+	document.addEventListener('DOMContentLoaded', () => {
+		const faqItems = document.querySelectorAll('.faq-item');
+
+		faqItems.forEach(item => {
+			const question = item.querySelector('.faq-question');
+
+			question?.addEventListener('click', () => {
+				const isActive = item.classList.contains('active');
+
+				faqItems.forEach(otherItem => {
+					otherItem.classList.remove('active');
+				});
+
+				if (!isActive) {
+					item.classList.add('active');
+				}
+			});
+		});
+	});
+</script>
+
+<style>
+	/* Global Styles */
+	body {
+		padding-top: 80px;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+
+	section {
+		padding: 80px 0;
+	}
+
+	h1, h2, h3 {
+		font-weight: 600;
+		line-height: 1.2;
+	}
+
+	h1 {
+		font-size: 3rem;
+		color: #2C6E63;
+		margin-bottom: 24px;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		color: #333;
+		text-align: center;
+		margin-bottom: 48px;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		color: #333;
+		margin-bottom: 16px;
+	}
+
+	/* Fixed Header */
+	.fixed-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.95);
+		backdrop-filter: blur(10px);
+		border-bottom: 1px solid rgba(44, 110, 99, 0.1);
+		z-index: 1000;
+		padding: 12px 0;
+		transition: all 0.3s ease;
+	}
+
+	.header-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header-logo img {
+		height: 50px;
+		width: auto;
+	}
+
+	.header-cta {
+		padding: 12px 24px;
+		font-size: 16px;
+		white-space: nowrap;
+	}
+
+	/* CTA Buttons */
+	.cta-btn {
+		display: inline-block;
+		padding: 16px 32px;
+		border: none;
+		border-radius: 8px;
+		font-size: 18px;
+		font-weight: 600;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		text-align: center;
+	}
+
+	.cta-primary {
+		background: linear-gradient(135deg, #2C6E63 0%, #355C7D 100%);
+		color: white;
+	}
+
+	.cta-secondary {
+		background: linear-gradient(135deg, #E27D60 0%, #C38D9E 100%);
+		color: white;
+	}
+
+	.cta-white {
+		background: white;
+		color: #2C6E63;
+	}
+
+	.cta-btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 10px 30px rgba(44, 110, 99, 0.3);
+	}
+
+	.cta-btn.large {
+		padding: 20px 40px;
+		font-size: 20px;
+	}
+
+	.cta-btn.extra-large {
+		padding: 24px 48px;
+		font-size: 22px;
+		font-weight: 700;
+	}
+
+	/* Hero Section */
+	.hero {
+		background: linear-gradient(135deg, #f8fffe 0%, #e8f5f3 100%);
+		padding: 100px 0;
+	}
+
+	.hero-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.hero-subtitle {
+		font-size: 1.25rem;
+		color: #666;
+		margin-bottom: 32px;
+		line-height: 1.6;
+	}
+
+	.hero-image img {
+		width: 100%;
+		border-radius: 16px;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+	}
+
+	/* Problems Section */
+	.problems {
+		background: white;
+	}
+
+	.problems-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 32px;
+		margin-bottom: 48px;
+	}
+
+	.problem-card {
+		background: #f9fafb;
+		border-radius: 16px;
+		padding: 32px;
+		text-align: center;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		border: 2px solid transparent;
+	}
+
+	.problem-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 30px rgba(226, 125, 96, 0.2);
+		border-color: #E27D60;
+	}
+
+	.problem-icon {
+		margin-bottom: 20px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.problem-card h3 {
+		font-size: 1.2rem;
+		color: #333;
+		margin-bottom: 12px;
+	}
+
+	.problem-card p {
+		color: #666;
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
+	.problems-cta {
+		text-align: center;
+	}
+
+	.problems-text {
+		font-size: 1.2rem;
+		color: #666;
+		margin-bottom: 32px;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+		line-height: 1.6;
+	}
+
+	/* Benefits Section */
+	.benefits {
+		background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+	}
+
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 32px;
+		margin-bottom: 48px;
+	}
+
+	.benefit-card {
+		background: white;
+		padding: 40px 32px;
+		border-radius: 16px;
+		text-align: center;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+		transition: transform 0.3s ease;
+	}
+
+	.benefit-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 30px rgba(44, 110, 99, 0.15);
+	}
+
+	.benefit-icon {
+		margin-bottom: 24px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.benefit-card h3 {
+		color: #2C6E63;
+		margin-bottom: 12px;
+		font-size: 1.3rem;
+	}
+
+	.benefit-card p {
+		color: #666;
+		margin: 0;
+		line-height: 1.5;
+	}
+
+	.benefits-cta {
+		text-align: center;
+	}
+
+	/* Differentials Section */
+	.differentials {
+		background: white;
+	}
+
+	.differentials-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.differentials-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.differentials-list li {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 24px;
+		font-size: 1.1rem;
+		color: #333;
+	}
+
+	.diff-check-icon {
+		background: #2C6E63;
+		color: white;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: bold;
+		flex-shrink: 0;
+	}
+
+	.differentials-image img {
+		width: 100%;
+		border-radius: 16px;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+	}
+
+	/* Testimonials Section */
+	.testimonials {
+		background: linear-gradient(135deg, #fef7ff 0%, #f3e8ff 100%);
+	}
+
+	.testimonials-carousel {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 32px;
+		margin-bottom: 48px;
+	}
+
+	.testimonial-card {
+		background: white;
+		padding: 32px;
+		border-radius: 16px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+	}
+
+	.stars {
+		color: #fbbf24;
+		font-size: 1.2rem;
+		margin-bottom: 16px;
+	}
+
+	.testimonial-content p {
+		font-style: italic;
+		color: #666;
+		margin-bottom: 20px;
+		line-height: 1.6;
+		font-size: 1.05rem;
+	}
+
+	.testimonial-author strong {
+		color: #2C6E63;
+		display: block;
+		font-size: 1.1rem;
+	}
+
+	.testimonial-author span {
+		color: #999;
+		font-size: 0.9rem;
+	}
+
+	.testimonials-cta {
+		text-align: center;
+	}
+
+	/* Comparison Section */
+	.comparison {
+		background: white;
+	}
+
+	.comparison-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.comparison-card {
+		padding: 40px 32px;
+		border-radius: 16px;
+		text-align: left;
+	}
+
+	.comparison-card.positive {
+		background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+		border: 3px solid #2C6E63;
+	}
+
+	.comparison-card.negative {
+		background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+		border: 3px solid #dc2626;
+	}
+
+	.comparison-card h3 {
+		margin-bottom: 24px;
+		font-size: 1.4rem;
+		text-align: center;
+	}
+
+	.comparison-card.positive h3 {
+		color: #2C6E63;
+	}
+
+	.comparison-card.negative h3 {
+		color: #dc2626;
+	}
+
+	.comparison-card ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.comparison-card li {
+		margin-bottom: 16px;
+		font-size: 1rem;
+		line-height: 1.6;
+		color: #333;
+	}
+
+	/* FAQ Section */
+	.faq {
+		background: #f9fafb;
+	}
+
+	.faq-list {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.faq-item {
+		background: white;
+		border-radius: 12px;
+		margin-bottom: 16px;
+		overflow: hidden;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+	}
+
+	.faq-question {
+		width: 100%;
+		padding: 24px;
+		background: none;
+		border: none;
+		text-align: left;
+		font-size: 1.2rem;
+		font-weight: 600;
+		color: #333;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.faq-question:hover {
+		background: #f9fafb;
+	}
+
+	.faq-icon {
+		font-size: 1.5rem;
+		color: #2C6E63;
+		transition: transform 0.3s ease;
+	}
+
+	.faq-item.active .faq-icon {
+		transform: rotate(45deg);
+	}
+
+	.faq-answer {
+		padding: 0 24px;
+		max-height: 0;
+		overflow: hidden;
+		transition: all 0.3s ease;
+	}
+
+	.faq-item.active .faq-answer {
+		padding: 0 24px 24px;
+		max-height: 300px;
+	}
+
+	.faq-answer p {
+		color: #666;
+		line-height: 1.6;
+		margin: 0;
+		font-size: 1.05rem;
+	}
+
+	/* Final CTA Section */
+	.final-cta {
+		background: linear-gradient(135deg, #2C6E63 0%, #355C7D 100%);
+		color: white;
+	}
+
+	.final-cta-content {
+		text-align: center;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	.final-cta h2 {
+		color: white;
+		margin-bottom: 24px;
+	}
+
+	.final-cta p {
+		font-size: 1.3rem;
+		margin-bottom: 40px;
+		opacity: 0.95;
+		line-height: 1.6;
+	}
+
+	.final-cta .cta-btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+	}
+
+	/* Footer */
+	.footer {
+		background: #1f2937;
+		color: white;
+		padding: 40px 0;
+	}
+
+	.footer-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.footer-info h3 {
+		color: #2C6E63;
+		margin-bottom: 12px;
+	}
+
+	.footer-info p {
+		color: #d1d5db;
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	.whatsapp-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		background: #25d366;
+		color: white;
+		padding: 12px 24px;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.3s ease;
+	}
+
+	.whatsapp-btn:hover {
+		background: #128c7e;
+		transform: translateY(-2px);
+	}
+
+	.whatsapp-icon {
+		font-size: 1.2rem;
+	}
+
+	/* Thin Footer Section */
+	.thin-footer {
+		background: #111827;
+		padding: 10px 0;
+		border-top: 1px solid #374151;
+	}
+
+	.thin-footer-text {
+		text-align: center;
+		font-size: 0.75rem;
+		color: #9ca3af;
+		margin: 0;
+		line-height: 1.4;
+	}
+
+	.thin-footer-text a {
+		color: #2C6E63;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.thin-footer-text a:hover {
+		color: #86efac;
+		text-decoration: underline;
+	}
+
+	/* Floating WhatsApp Button */
+	.whatsapp-float-btn {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		width: 70px;
+		height: 70px;
+		background: #25d366;
+		color: white;
+		border: none;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+		cursor: pointer;
+		z-index: 1000;
+		transition: all 0.3s ease;
+		padding: 0;
+	}
+
+	.whatsapp-float-btn:hover {
+		background: #128c7e;
+		transform: translateY(-3px);
+		box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+	}
+
+	/* Responsive Design */
+	@media (max-width: 968px) {
+		.hero-content,
+		.differentials-content {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.comparison-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.problems-grid,
+		.benefits-grid,
+		.testimonials-carousel {
+			grid-template-columns: 1fr;
+		}
+
+		h1 {
+			font-size: 2.2rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		section {
+			padding: 60px 0;
+		}
+
+		.hero {
+			padding: 80px 0;
+		}
+
+		.footer-content {
+			flex-direction: column;
+			gap: 24px;
+			text-align: center;
+		}
+
+		.cta-btn.extra-large {
+			padding: 20px 36px;
+			font-size: 18px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.header-logo img {
+			height: 40px;
+		}
+
+		.header-cta {
+			padding: 10px 16px;
+			font-size: 14px;
+		}
+
+		body {
+			padding-top: 70px;
+		}
+
+		h1 {
+			font-size: 1.8rem;
+		}
+
+		h2 {
+			font-size: 1.6rem;
+		}
+
+		.cta-btn {
+			padding: 14px 24px;
+			font-size: 16px;
+		}
+
+		.cta-btn.large {
+			padding: 16px 28px;
+			font-size: 18px;
+		}
+	}
+</style>

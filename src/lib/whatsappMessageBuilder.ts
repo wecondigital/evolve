@@ -21,6 +21,7 @@ const PAGE_TOPICS: Record<string, string> = {
   '/fisioterapia-infantil': 'Fisioterapia Infantil',
   '/osteopatia-disquesia': 'tratamento de disquesia em bebês',
   '/osteopatia-colicas': 'tratamento de cólicas em bebês',
+  '/terapia-ondas-choque': 'Terapia por Ondas de Choque',
 };
 
 /**
