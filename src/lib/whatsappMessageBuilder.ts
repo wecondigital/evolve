@@ -23,6 +23,7 @@ const PAGE_TOPICS: Record<string, string> = {
   '/osteopatia-colicas': 'tratamento de cólicas em bebês',
   '/terapia-ondas-choque': 'Terapia por Ondas de Choque',
   '/osteopatia-pediatrica': 'Osteopatia Pediátrica com as condições especiais da Black November',
+  '/osteopatia-adulto': 'Osteopatia para Adultos',
 };
 
 /**
