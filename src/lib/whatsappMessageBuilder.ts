@@ -22,6 +22,7 @@ const PAGE_TOPICS: Record<string, string> = {
   '/osteopatia-disquesia': 'tratamento de disquesia em bebês',
   '/osteopatia-colicas': 'tratamento de cólicas em bebês',
   '/terapia-ondas-choque': 'Terapia por Ondas de Choque',
+  '/osteopatia-pediatrica': 'Osteopatia Pediátrica com as condições especiais da Black November',
 };
 
 /**
