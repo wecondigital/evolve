@@ -18,6 +18,7 @@ const PAGE_TOPICS: Record<string, string> = {
   '/assimetria-craniana': 'tratamento de assimetria craniana',
   '/assimetria-craniana-mutirao': 'agendamento para assimetria craniana do Mutirão Mês das Crianças',
   '/torcicolo-congenito': 'tratamento de torcicolo congênito',
+  '/ortese-craniana': 'Órtese Craniana',
   '/fisioterapia-infantil': 'Fisioterapia Infantil',
   '/osteopatia-disquesia': 'tratamento de disquesia em bebês',
   '/osteopatia-colicas': 'tratamento de cólicas em bebês',
