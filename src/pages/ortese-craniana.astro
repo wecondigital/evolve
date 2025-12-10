@@ -195,6 +195,32 @@ const pageDescription = "Tratamento preciso e eficaz com órtese craniana custom
 		</div>
 	</section>
 
+	<!-- Tipos de Órtese Craniana -->
+	<section class="types-section">
+		<div class="container">
+			<div class="types-content">
+				<div class="types-text">
+					<h2>Tipos de Órtese Craniana</h2>
+					<p class="types-intro">Existem diferentes modelos de órtese craniana, cada um desenvolvido para tratar tipos específicos de assimetrias e deformidades cranianas.</p>
+
+					<p>As órteses cranianas podem variar em design e aplicação dependendo da condição a ser tratada:</p>
+
+					<ul class="types-list">
+						<li><strong>Órtese para Plagiocefalia:</strong> Desenvolvida para corrigir o achatamento lateral da cabeça, redirecionando o crescimento de forma equilibrada.</li>
+						<li><strong>Órtese para Braquicefalia:</strong> Específica para correção do achatamento na região posterior do crânio, promovendo alongamento proporcional.</li>
+						<li><strong>Órtese para Escafocefalia:</strong> Indicada para casos de fechamento prematuro da sutura sagital, auxiliando na correção da forma alongada do crânio.</li>
+						<li><strong>Órtese Customizada:</strong> Fabricada sob medida através de escaneamento 3D, garantindo ajuste perfeito e correção precisa para cada caso específico.</li>
+					</ul>
+
+					<p>Na <strong>Evolve</strong>, utilizamos tecnologia de scanner 3D para criar órteses 100% personalizadas, garantindo o tratamento mais eficaz independentemente do tipo de assimetria craniana do seu bebê.</p>
+				</div>
+				<div class="types-image">
+					<img src="/images/ortese-craniana-tipos.png" alt="Diferentes tipos de órtese craniana para tratamento de assimetrias" />
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Diferenciais -->
 	<section class="differentials">
 		<div class="container">
@@ -940,6 +966,88 @@ const pageDescription = "Tratamento preciso e eficaz com órtese craniana custom
 		border-radius: 4px;
 	}
 
+	/* Types Section */
+	.types-section {
+		background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+		padding: 80px 0;
+	}
+
+	.types-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.types-text h2 {
+		color: #74B077;
+		text-align: left;
+		margin-bottom: 24px;
+		font-size: 2.2rem;
+	}
+
+	.types-intro {
+		font-size: 1.2rem;
+		color: #74B077;
+		font-weight: 600;
+		margin-bottom: 24px;
+		line-height: 1.5;
+	}
+
+	.types-text p {
+		color: #666;
+		line-height: 1.6;
+		margin-bottom: 20px;
+		font-size: 1.1rem;
+	}
+
+	.types-text p strong {
+		color: #3C81A4;
+		font-weight: 600;
+	}
+
+	.types-list {
+		list-style: none;
+		padding: 0;
+		margin: 20px 0;
+		background: white;
+		border-radius: 12px;
+		padding: 24px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+	}
+
+	.types-list li {
+		color: #666;
+		margin-bottom: 16px;
+		padding-left: 24px;
+		position: relative;
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+
+	.types-list li::before {
+		content: "•";
+		color: #74B077;
+		font-weight: bold;
+		position: absolute;
+		left: 0;
+		font-size: 1.2rem;
+	}
+
+	.types-list li:last-child {
+		margin-bottom: 0;
+	}
+
+	.types-list li strong {
+		color: #3C81A4;
+	}
+
+	.types-image img {
+		width: 100%;
+		border-radius: 16px;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+	}
+
 	/* Differentials Section */
 	.differentials {
 		background: white;
@@ -1509,6 +1617,21 @@ const pageDescription = "Tratamento preciso e eficaz com órtese craniana custom
 		.treatment-image-polaroid img {
 			height: 200px;
 		}
+
+		.types-content {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.types-text h2 {
+			font-size: 1.8rem;
+			text-align: center;
+		}
+
+		.types-image img {
+			max-width: 100%;
+		}
+
     /* CSS adicional para a imagem reposicionada */
 .cranial-asymmetry-image-top {
 	text-align: center;
